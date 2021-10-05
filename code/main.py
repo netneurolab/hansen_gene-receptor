@@ -67,26 +67,6 @@ def corr_spin(x, y, spins, nspins):
     return rho, pval
 
 
-def diffusion_map_embed(X, no_dims=5, alpha=1, sigma=1):
-    # author: Zhen-Qi Liu
-
-    X = X - np.min(X)
-    X = X / np.max(X)
-    sum_X = np.sum(X ** 2, axis=1)
-    K = np.exp(-1 * (sum_X.T + (sum_X.T - 2 * (X @ X.T).T).T) / (2 * sigma ** 2))
-
-    p = np.sum(K, axis=0, keepdims=True).T
-    K = np.divide(K, (p @ p.T) ** alpha)
-    p = np.sqrt(np.sum(K, axis=0, keepdims=True)).T
-    K = K / (p @ p.T)
-    u, s, v = np.linalg.svd(K, full_matrices=False)
-    from sklearn.utils.extmath import svd_flip
-    u, v = svd_flip(u, v)
-    u_norm = np.divide(u, u[:, 0].T)
-    mapped_X = u_norm[:, 1:no_dims + 1]
-    return mapped_X, u, s, v
-
-
 """
 load data
 """
@@ -120,9 +100,6 @@ spins = stats.gen_spinsamples(coords, hemiid=np.ones((len(leftcortex),)),
 expression = pd.read_csv(path+'data/expression/scale033_data.csv')
 expression125 = pd.read_csv(path+'data/expression/scale125_data.csv')
 ds = pd.read_csv(path+'data/expression/scale033_stability.csv')
-
-# get fc
-fc = np.load(path+'data/fc.npy')
 
 """
 make autoradiography receptor matrix
@@ -246,10 +223,6 @@ plt.savefig(path+'figures/scatter_ds.eps')
 Figure 4: functional heirarchy
 """
 
-# fc_gradient, _, _, _ = diffusion_map_embed(fc, no_dims=1, alpha=0.5, sigma=1)
-# fc_gradient = np.squeeze(fc_gradient)[-111:]
-# bins = pd.qcut(fc_gradient, 5, labels=['1', '2', '3', '4', '5'])
-# bins = bins.codes
 mesulam = np.genfromtxt(path+'data/mesulam_mapping.csv', delimiter=',')
 mesulam = mesulam[-111:].astype(int)
 system_corr = np.zeros((4, len(PETgenes)))
