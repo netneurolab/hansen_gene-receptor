@@ -3,7 +3,7 @@ This repository contains code and data created in support of my project, "Corres
 All code was written in Python.
 
 ## Main analyses
-All of the analyses can be found in (code/main.py)[code/main.py], which is organized by figures.
+All of the analyses can be found in [code/main.py](code/main.py), which is organized by figures.
 
 ## Data
 The [data](data/) folder contains the following files/directories:
