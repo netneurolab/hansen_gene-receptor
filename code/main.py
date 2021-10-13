@@ -176,27 +176,6 @@ for i in range(len(PETgenes)):
 plt.tight_layout()
 plt.savefig(path+'figures/scatter_pet.eps')
 
-# subcortex
-
-PETcorr_subc = {'rho' : np.zeros((len(PETgenes), )),
-                'pspin' : np.zeros((len(PETgenes), ))}
-
-plt.ion()
-fig, axs = plt.subplots(5, 5, figsize=(15, 12))
-axs = axs.ravel()
-for i in range(len(PETgenes)):
-    x = PETrecept_subc[:, receptor_names_p.index(PETgenes_recept[i])]
-    try:
-        y = zscore(expression.iloc[subcortex][PETgenes[i]])
-    except KeyError:
-        continue
-    PETcorr_subc['rho'][i], PETcorr_subc['pspin'][i] = pearsonr(x, y)
-    axs[i].scatter(x, y, s=5)
-    axs[i].set_xlabel(PETgenes_recept[i] + ' density')
-    axs[i].set_ylabel(PETgenes[i] + ' expression')
-plt.tight_layout()
-plt.savefig(path+'figures/scatter_pet_subc.eps')
-
 """
 Figure 2: autoradiography receptors
 """
@@ -325,6 +304,28 @@ for i in range(len(GABAAgenes)):
 plt.tight_layout()
 plt.savefig(path+'figures/scatter_gabaa.eps')
 
+"""
+Supplementary Figure 3: Subcortex
+"""
+
+PETcorr_subc = {'rho' : np.zeros((len(PETgenes), )),
+                'pspin' : np.zeros((len(PETgenes), ))}
+
+plt.ion()
+fig, axs = plt.subplots(5, 5, figsize=(15, 12))
+axs = axs.ravel()
+for i in range(len(PETgenes)):
+    x = PETrecept_subc[:, receptor_names_p.index(PETgenes_recept[i])]
+    try:
+        y = zscore(expression.iloc[subcortex][PETgenes[i]])
+    except KeyError:
+        continue
+    PETcorr_subc['rho'][i], PETcorr_subc['pspin'][i] = pearsonr(x, y)
+    axs[i].scatter(x, y, s=5)
+    axs[i].set_xlabel(PETgenes_recept[i] + ' density')
+    axs[i].set_ylabel(PETgenes[i] + ' expression')
+plt.tight_layout()
+plt.savefig(path+'figures/scatter_pet_subc.eps')
 
 """
 Supplemental tables
