@@ -1,11 +1,10 @@
 import numpy as np
-from scipy.ndimage.interpolation import rotate
-from scipy.stats import zscore, pearsonr, bootstrap
+from scipy.stats import zscore, pearsonr
 from statsmodels.stats.multitest import multipletests
 from netneurotools import datasets, stats, utils
 import pandas as pd
 import matplotlib.pyplot as plt
-
+import abagen
 
 def brodmann2dk(M, duplicate, mapping):
     """
@@ -47,6 +46,10 @@ def brodmann2dk(M, duplicate, mapping):
 
 def corr_spin(x, y, spins, nspins):
 
+    # convert x and y to arrays to avoid dataframe index bugs
+    x = np.array(x)
+    y = np.array(y)
+
     rho, _ = pearsonr(x, y)
     null = np.zeros((nspins,))
 
@@ -79,6 +82,8 @@ PETrecept = np.genfromtxt(path+'data/PET_receptors.csv', delimiter=',')
 PETrecept = zscore(PETrecept)
 PETrecept125 = np.genfromtxt(path+'data/PET_receptors_scale125.csv', delimiter=',')
 PETrecept125 = zscore(PETrecept125)
+PETrecept_subc = np.genfromtxt(path+'data/PET_receptors_subcortex.csv', delimiter=',')
+PETrecept_subc = zscore(PETrecept_subc)
 receptor_names_p = ["5HT1a", "5HT1b", "5HT2a", "5HT4", "5HT6", "5HTT", "A4B2",
                   "CB1", "D1", "D2", "DAT", "GABAa", "H3", "M1", "mGluR5",
                   "MU", "NAT", "VAChT"]
@@ -90,6 +95,8 @@ leftcortex = info.query('scale == "scale033" \
                     & structure == "cortex" \
                     & hemisphere == "L"')['id']
 leftcortex = np.array(leftcortex) - 1  # python indexing
+subcortex = info.query('scale == "scale033" & structure == "subcortex')
+subcortex = np.array(subcortex) - 1  # python indexing
 coords = utils.get_centroids(cammoun['scale033'], image_space=True)
 coords = coords[leftcortex, :]
 nspins = 10000
@@ -97,7 +104,7 @@ spins = stats.gen_spinsamples(coords, hemiid=np.ones((len(leftcortex),)),
                               n_rotate=nspins, seed=1234)
 
 # get gene expression
-expression = pd.read_csv(path+'data/expression/scale033_data.csv')
+expression = abagen.get_expression_data(cammoun['scale033'], ibf_threshold=0)
 expression125 = pd.read_csv(path+'data/expression/scale125_data.csv')
 ds = pd.read_csv(path+'data/expression/scale033_stability.csv')
 
@@ -148,6 +155,8 @@ PETgenes_recept = ['5HT1a', '5HT1b', '5HT2a', '5HT4', '5HT6', '5HTT',
                    'GABAa', 'GABAa', 'H3', 'M1', 'mGluR5', 'MU', 'NAT',
                    'VAChT']
 
+# cortex
+
 PETcorr = {'rho' : np.zeros((len(PETgenes), )),
            'pspin' : np.zeros((len(PETgenes), ))}
 
@@ -156,7 +165,10 @@ fig, axs = plt.subplots(5, 5, figsize=(15, 12))
 axs = axs.ravel()
 for i in range(len(PETgenes)):
     x = PETrecept[34:, receptor_names_p.index(PETgenes_recept[i])]
-    y = zscore(expression[PETgenes[i]])
+    try:  # necessary if ibf_threshold != 0 in abagen.get_expression_data()
+        y = zscore(expression.iloc[leftcortex][PETgenes[i]])
+    except KeyError:
+        continue
     PETcorr['rho'][i], PETcorr['pspin'][i] = corr_spin(x, y, spins, nspins)
     axs[i].scatter(x, y, s=5)
     axs[i].set_xlabel(PETgenes_recept[i] + ' density')
@@ -164,6 +176,26 @@ for i in range(len(PETgenes)):
 plt.tight_layout()
 plt.savefig(path+'figures/scatter_pet.eps')
 
+# subcortex
+
+PETcorr_subc = {'rho' : np.zeros((len(PETgenes), )),
+                'pspin' : np.zeros((len(PETgenes), ))}
+
+plt.ion()
+fig, axs = plt.subplots(5, 5, figsize=(15, 12))
+axs = axs.ravel()
+for i in range(len(PETgenes)):
+    x = PETrecept_subc[:, receptor_names_p.index(PETgenes_recept[i])]
+    try:
+        y = zscore(expression.iloc[subcortex][PETgenes[i]])
+    except KeyError:
+        continue
+    PETcorr_subc['rho'][i], PETcorr_subc['pspin'][i] = pearsonr(x, y)
+    axs[i].scatter(x, y, s=5)
+    axs[i].set_xlabel(PETgenes_recept[i] + ' density')
+    axs[i].set_ylabel(PETgenes[i] + ' expression')
+plt.tight_layout()
+plt.savefig(path+'figures/scatter_pet_subc.eps')
 
 """
 Figure 2: autoradiography receptors
