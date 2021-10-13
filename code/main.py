@@ -95,7 +95,7 @@ leftcortex = info.query('scale == "scale033" \
                     & structure == "cortex" \
                     & hemisphere == "L"')['id']
 leftcortex = np.array(leftcortex) - 1  # python indexing
-subcortex = info.query('scale == "scale033" & structure == "subcortex')
+subcortex = info.query('scale == "scale033" & structure == "subcortex')['id']
 subcortex = np.array(subcortex) - 1  # python indexing
 coords = utils.get_centroids(cammoun['scale033'], image_space=True)
 coords = coords[leftcortex, :]
@@ -311,6 +311,8 @@ Supplementary Figure 3: Subcortex
 PETcorr_subc = {'rho' : np.zeros((len(PETgenes), )),
                 'pspin' : np.zeros((len(PETgenes), ))}
 
+subc_label = info.query('scale=="scale033" & structure=="subcortex"')['label']
+subc_name, subc_label = np.unique(np.array(subc_label), return_inverse=True)
 plt.ion()
 fig, axs = plt.subplots(5, 5, figsize=(15, 12))
 axs = axs.ravel()
@@ -321,7 +323,7 @@ for i in range(len(PETgenes)):
     except KeyError:
         continue
     PETcorr_subc['rho'][i], PETcorr_subc['pspin'][i] = pearsonr(x, y)
-    axs[i].scatter(x, y, s=5)
+    axs[i].scatter(x, y, s=10, c=subc_label)
     axs[i].set_xlabel(PETgenes_recept[i] + ' density')
     axs[i].set_ylabel(PETgenes[i] + ' expression')
 plt.tight_layout()
