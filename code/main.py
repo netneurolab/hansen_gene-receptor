@@ -104,9 +104,13 @@ spins = stats.gen_spinsamples(coords, hemiid=np.ones((len(leftcortex),)),
                               n_rotate=nspins, seed=1234)
 
 # get gene expression
-expression = abagen.get_expression_data(cammoun['scale033'], ibf_threshold=0)
+expression = pd.read_csv(path+'data/expression/scale033_data.csv')
 expression125 = pd.read_csv(path+'data/expression/scale125_data.csv')
 ds = pd.read_csv(path+'data/expression/scale033_stability.csv')
+
+# alternative gene expression data:
+# expression = abagen.get_expression_data(cammoun['scale033'], ibf_threshold=0)
+# expression = expression.iloc[leftcortex]
 
 """
 make autoradiography receptor matrix
@@ -166,7 +170,7 @@ axs = axs.ravel()
 for i in range(len(PETgenes)):
     x = PETrecept[34:, receptor_names_p.index(PETgenes_recept[i])]
     try:  # necessary if ibf_threshold != 0 in abagen.get_expression_data()
-        y = zscore(expression.iloc[leftcortex][PETgenes[i]])
+        y = zscore(expression[PETgenes[i]])
     except KeyError:
         continue
     PETcorr['rho'][i], PETcorr['pspin'][i] = corr_spin(x, y, spins, nspins)
@@ -196,7 +200,10 @@ fig, axs = plt.subplots(5, 5, figsize=(15, 12))
 axs = axs.ravel()
 for i in range(len(AUTgenes)):
     x = autorad_data[:, receptor_names_a.index(AUTgenes_recept[i])]
-    y = zscore(expression[AUTgenes[i]])[:-1]
+    try:  # necessary if ibf_threshold != 0 in abagen.get_expression_data()
+        y = zscore(expression[AUTgenes[i]][:-1])
+    except KeyError:
+        continue
     AUTcorr['rho'][i], AUTcorr['pspin'][i] = corr_spin(x, y, spins, nspins)
     axs[i].scatter(x, y, s=5)
     axs[i].set_xlabel(AUTgenes_recept[i] + ' density')
@@ -297,7 +304,7 @@ fig, axs = plt.subplots(4, 5, figsize=(15, 10))
 axs = axs.ravel()
 for i in range(len(GABAAgenes)):
     x = PETrecept[34:, receptor_names_p.index('GABAa')]
-    y = zscore(expression[GABAAgenes[i]])
+    y = zscore(expression.iloc[leftcortex][GABAAgenes[i]])
     axs[i].scatter(x, y, s=5)
     axs[i].set_xlabel('GABAa density')
     axs[i].set_ylabel(GABAAgenes[i] + ' expression')
@@ -355,21 +362,14 @@ petinfo['receptors'] = ['5HT1a', '5HT1b', '5HT2a', '5HT4', '5HT6', '5HTT'] \
 
 petinfo['rho'] = np.zeros((len(petinfo['genes']), ))
 petinfo['pspin'] = np.zeros((len(petinfo['genes']), ))
-petinfo['ci-lower'] = np.zeros((len(petinfo['genes']), ))
-petinfo['ci-upper'] = np.zeros((len(petinfo['genes']), ))
-
-def corr(x, y):
-    r, _ = pearsonr(x, y)
-    return r
 
 for i in range(len(petinfo['genes'])):
     x = PETrecept[34:, receptor_names_p.index(petinfo['receptors'][i])]
-    y = zscore(expression[petinfo['genes'][i]])
+    try:  # necessary if ibf_threshold != 0 in abagen.get_expression_data()
+        y = zscore(expression[petinfo['genes'][i]])
+    except KeyError:
+        continue
     petinfo['rho'][i], petinfo['pspin'][i] = corr_spin(x, y, spins, nspins)
-    # petinfo['ci-lower'], petinfo['ci-upper'] = bootstrap(data=(x, y),
-    #                                                      statistic=corr,
-    #                                                      n_resamples=nspins,
-    #                                                      method='BCa')
 
 needs_correct = ['GABAa', 'A4B2']
 for i in range(len(needs_correct)):
@@ -378,7 +378,7 @@ for i in range(len(needs_correct)):
     _, petinfo['pspin'][index], _, _ = multipletests(pvals=uncorrected_pval, method='fdr_bh')
 
 petinfo = pd.DataFrame.from_dict(petinfo)
-petinfo.to_csv(path+'results/petinfo.csv')
+petinfo.to_csv(path+'results/Table_S3.csv')
 
 # AUTORADIOGRAPHY
 
@@ -412,17 +412,14 @@ autinfo['receptors'] = ['AMPA' for i in range(4)] \
 
 autinfo['rho'] = np.zeros((len(autinfo['genes']), ))
 autinfo['pspin'] = np.zeros((len(autinfo['genes']), ))
-autinfo['ci-lower'] = np.zeros((len(autinfo['genes']), ))
-autinfo['ci-upper'] = np.zeros((len(autinfo['genes']), ))
 
 for i in range(len(autinfo['genes'])):
     x = autorad_data[:, receptor_names_a.index(autinfo['receptors'][i])]
-    y = zscore(expression[autinfo['genes'][i]])[:-1]
+    try:  # necessary if ibf_threshold != 0 in abagen.get_expression_data()
+        y = zscore(expression[autinfo['genes'][i]][:-1])
+    except KeyError:
+        continue
     autinfo['rho'][i], autinfo['pspin'][i] = corr_spin(x, y, spins, nspins)
-    # autinfo['ci-lower'], autinfo['ci-upper'] = bootstrap((x, y),   
-    #                                                      pearsonr,
-    #                                                      n_resamples=nspins,
-    #                                                      method='percentile')
 
 needs_correct = ['AMPA', 'NMDA', 'kainate', 'GABAa', 'GABAa/BZ', 'GABAb', 'a4b2']
 for i in range(len(needs_correct)):
@@ -431,4 +428,4 @@ for i in range(len(needs_correct)):
     _, autinfo['pspin'][index], _, _ = multipletests(pvals=uncorrected_pval, method='fdr_bh')
 
 autinfo = pd.DataFrame.from_dict(autinfo)
-autinfo.to_csv(path+'results/autinfo.csv')
+autinfo.to_csv(path+'results/Table_S4.csv')
