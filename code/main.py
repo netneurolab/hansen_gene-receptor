@@ -86,18 +86,19 @@ PETrecept_subc = np.genfromtxt(path+'data/PET_receptors_subcortex.csv', delimite
 PETrecept_subc = zscore(PETrecept_subc)
 receptor_names_p = ["5HT1a", "5HT1b", "5HT2a", "5HT4", "5HT6", "5HTT", "A4B2",
                   "CB1", "D1", "D2", "DAT", "GABAa", "H3", "M1", "mGluR5",
-                  "MU", "NAT", "VAChT"]
+                  "MOR", "NET", "VAChT"]
 
 # get spins
+scale = 'scale125'
 cammoun = datasets.fetch_cammoun2012()
 info = pd.read_csv(cammoun['info'])
-leftcortex = info.query('scale == "scale033" \
+leftcortex = info.query('scale == @scale \
                     & structure == "cortex" \
                     & hemisphere == "L"')['id']
 leftcortex = np.array(leftcortex) - 1  # python indexing
-subcortex = info.query('scale == "scale033" & structure == "subcortex')['id']
+subcortex = info.query('scale == @scale & structure == "subcortex"')['id']
 subcortex = np.array(subcortex) - 1  # python indexing
-coords = utils.get_centroids(cammoun['scale033'], image_space=True)
+coords = utils.get_centroids(cammoun[scale], image_space=True)
 coords = coords[leftcortex, :]
 nspins = 10000
 spins = stats.gen_spinsamples(coords, hemiid=np.ones((len(leftcortex),)),
@@ -156,7 +157,7 @@ PETgenes = ['HTR1A', 'HTR1B', 'HTR2A', 'HTR4', 'HTR6', 'SLC6A4', 'CHRNA4',
             'GABRG2', 'HRH3', 'CHRM1', 'GRM5', 'OPRM1', 'SLC6A2', 'SLC18A3']
 PETgenes_recept = ['5HT1a', '5HT1b', '5HT2a', '5HT4', '5HT6', '5HTT',
                    'A4B2', 'A4B2', 'CB1', 'D1', 'D2', 'DAT', 'GABAa',
-                   'GABAa', 'GABAa', 'H3', 'M1', 'mGluR5', 'MU', 'NAT',
+                   'GABAa', 'GABAa', 'H3', 'M1', 'mGluR5', 'MOR', 'NET',
                    'VAChT']
 
 # cortex
@@ -358,7 +359,7 @@ petinfo['receptors'] = ['5HT1a', '5HT1b', '5HT2a', '5HT4', '5HT6', '5HTT'] \
                        + ['A4B2' for i in range(11)] \
                        + ['CB1', 'D1', 'D2', 'DAT'] \
                        + ['GABAa' for i in range(19)] \
-                       + ['H3', 'M1', 'mGluR5', 'MU', 'NAT', 'VAChT']
+                       + ['H3', 'M1', 'mGluR5', 'MOR', 'NET', 'VAChT']
 
 petinfo['rho'] = np.zeros((len(petinfo['genes']), ))
 petinfo['pspin'] = np.zeros((len(petinfo['genes']), ))
