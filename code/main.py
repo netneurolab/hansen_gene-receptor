@@ -1,9 +1,10 @@
 import numpy as np
-from scipy.stats import zscore, pearsonr
+from scipy.stats import zscore, spearmanr
 from statsmodels.stats.multitest import multipletests
 from netneurotools import datasets, stats, utils
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 import abagen
 
 def brodmann2dk(M, duplicate, mapping):
@@ -50,7 +51,7 @@ def corr_spin(x, y, spins, nspins):
     x = np.array(x)
     y = np.array(y)
 
-    rho, _ = pearsonr(x, y)
+    rho, _ = spearmanr(x, y)
     null = np.zeros((nspins,))
 
     if len(x) == spins.shape[0] - 1:  # if insula is missing
@@ -63,7 +64,7 @@ def corr_spin(x, y, spins, nspins):
         # convert to dataframe in case insula is missing
         # for better handling of nans
         df = pd.DataFrame(np.stack((x, tmp)).T, columns=['x', 'y'])
-        null[i] = df["x"].corr(df["y"])
+        null[i] = df["x"].corr(df["y"], method='spearman')
 
     pval = (1 + sum(abs((null - np.mean(null))) >
                     abs((rho - np.mean(null))))) / (nspins + 1)
@@ -89,7 +90,7 @@ receptor_names_p = ["5HT1a", "5HT1b", "5HT2a", "5HT4", "5HT6", "5HTT", "A4B2",
                   "MOR", "NET", "VAChT"]
 
 # get spins
-scale = 'scale125'
+scale = 'scale033'
 cammoun = datasets.fetch_cammoun2012()
 info = pd.read_csv(cammoun['info'])
 leftcortex = info.query('scale == @scale \
@@ -105,11 +106,17 @@ spins = stats.gen_spinsamples(coords, hemiid=np.ones((len(leftcortex),)),
                               n_rotate=nspins, seed=1234)
 
 # get gene expression
-expression = pd.read_csv(path+'data/expression/scale033_data.csv')
-expression125 = pd.read_csv(path+'data/expression/scale125_data.csv')
-ds = pd.read_csv(path+'data/expression/scale033_stability.csv')
+rnaseq = False
+if not(rnaseq):
+    expression = pd.read_csv(path+'data/expression/scale033_data.csv')
+    expression125 = pd.read_csv(path+'data/expression/scale125_data.csv')
+    ds = pd.read_csv(path+'data/expression/scale033_stability.csv')
+else:
+    expression = pd.read_csv(path+'data/expression/rnaseq_data/scale033_data_rnaseq.csv')
+    expression125 = pd.read_csv(path+'data/expression/rnaseq_data/scale125_data_rnaseq.csv')
+    ds = pd.read_csv(path+'data/expression/rnaseq_data/scale033_stability_rnaseq.csv')
 
-# alternative gene expression data:
+# fetch gene expression data:
 # expression = abagen.get_expression_data(cammoun['scale033'], ibf_threshold=0)
 # expression = expression.iloc[leftcortex]
 
@@ -178,6 +185,7 @@ for i in range(len(PETgenes)):
     axs[i].scatter(x, y, s=5)
     axs[i].set_xlabel(PETgenes_recept[i] + ' density')
     axs[i].set_ylabel(PETgenes[i] + ' expression')
+    axs[i].set_title(['r=' + str(PETcorr['rho'][i]) + ', p= ' + str(PETcorr['pspin'][i])])
 plt.tight_layout()
 plt.savefig(path+'figures/scatter_pet.eps')
 
@@ -209,6 +217,7 @@ for i in range(len(AUTgenes)):
     axs[i].scatter(x, y, s=5)
     axs[i].set_xlabel(AUTgenes_recept[i] + ' density')
     axs[i].set_ylabel(AUTgenes[i] + ' expression')
+    axs[i].set_title(['r=' + str(AUTcorr['rho'][i]) + ', p= ' + str(AUTcorr['pspin'][i])])
 plt.tight_layout()
 plt.savefig(path+'figures/scatter_aut.eps')
 
@@ -218,20 +227,32 @@ Figure 3: differential stability
 plt.ion()
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 7))
 # pet
+xarr = []
+yarr = []
 for i in range(len(PETcorr['rho'])):
     x = PETcorr['rho'][i]
     y = ds.query('genes == @PETgenes[@i]')['stability']
     ax1.scatter(x, y, c='b')
     ax1.text(x+0.01, y+0.01, PETgenes[i], fontsize=7)
+    xarr.append(x)
+    yarr.append(y)
+sns.regplot(x=np.array(xarr), y=np.array(yarr),
+            scatter=False, ci=False, ax=ax1)
 ax1.set_xlabel('gene-receptor correlation')
 ax1.set_ylabel('differential stability')
 ax1.set_aspect(1.0/ax1.get_data_ratio(), adjustable='box')
 # autorad
+xarr = []
+yarr = []
 for i in range(len(AUTcorr['rho'])):
     x = AUTcorr['rho'][i]
     y = ds.query('genes == @AUTgenes[@i]')['stability']
     ax2.scatter(x, y, c='b')
     ax2.text(x+0.01, y+0.01, AUTgenes[i], fontsize=7)
+    xarr.append(x)
+    yarr.append(y)
+sns.regplot(x=np.array(xarr), y=np.array(yarr),
+            scatter=False, ci=False, ax=ax2)
 ax2.set_xlabel('gene-receptor correlation')
 ax2.set_ylabel('differential stability')
 ax2.set_aspect(1.0/ax2.get_data_ratio(), adjustable='box')
@@ -249,7 +270,7 @@ for system in range(system_corr.shape[0]):
     for gene in range(len(PETgenes)):
         x = PETrecept125[-111:, receptor_names_p.index(PETgenes_recept[gene])][mesulam==system+1]
         y = zscore(expression125[PETgenes[gene]])[mesulam==system+1]
-        system_corr[system, gene], _  = pearsonr(x, y)
+        system_corr[system, gene], _  = spearmanr(x, y)
 
 # plot for each receptor
 plt.ion()
@@ -330,12 +351,133 @@ for i in range(len(PETgenes)):
         y = zscore(expression.iloc[subcortex][PETgenes[i]])
     except KeyError:
         continue
-    PETcorr_subc['rho'][i], PETcorr_subc['pspin'][i] = pearsonr(x, y)
+    PETcorr_subc['rho'][i], PETcorr_subc['pspin'][i] = spearmanr(x, y)
     axs[i].scatter(x, y, s=10, c=subc_label)
     axs[i].set_xlabel(PETgenes_recept[i] + ' density')
     axs[i].set_ylabel(PETgenes[i] + ' expression')
 plt.tight_layout()
 plt.savefig(path+'figures/scatter_pet_subc.eps')
+
+fig, ax = plt.subplots()
+xarr = []
+yarr = []
+for i in range(len(PETcorr_subc['rho'])):
+    x = PETcorr_subc['rho'][i]
+    y = ds.query('genes == @PETgenes[@i]')['stability']
+    ax.scatter(x, y, c='b')
+    ax.text(x+0.01, y+0.01, PETgenes[i], fontsize=7)
+    xarr.append(x)
+    yarr.append(y)
+sns.regplot(x=np.array(xarr), y=np.array(yarr),
+            scatter=False, ci=False, ax=ax)
+ax.set_xlabel('gene-receptor correlation')
+ax.set_ylabel('differential stability')
+ax.set_aspect(1.0/ax.get_data_ratio(), adjustable='box')
+plt.savefig(path+'figures/scatter_ds_subc.eps')
+
+"""
+Comparing autoradiography to PET
+"""
+
+# overlap: 5-ht1a, 5-ht2, a4b2, D1, GABAa, M1
+pet_idx = [0, 2, 6, 8, 11, 13]
+aut_idx = [12, 13, 9, 14, 3, 6]
+
+fig, axs = plt.subplots(1, len(pet_idx), figsize=(17, 3))
+axs = axs.ravel()
+for i in range(len(pet_idx)):
+    axs[i].scatter(PETrecept[34:-1, pet_idx[i]], autorad_data[:, aut_idx[i]])
+    axs[i].set_xlabel(receptor_names_p[pet_idx[i]] + ' PET density')
+    axs[i].set_ylabel(receptor_names_a[aut_idx[i]] + ' autorad density')
+    r, p = spearmanr(PETrecept[34:-1, pet_idx[i]], autorad_data[:, aut_idx[i]])
+    print(receptor_names_p[pet_idx[i]] + ': r = ' + str(r)[:4] + ', p = ' + str(p)[:5])
+    axs[i].set_title('r = ' + str(r)[:4])
+plt.tight_layout()
+plt.savefig(path+'figures/scatter_petvsaut_density.eps')
+
+
+"""
+Comparing probe selection methods
+"""
+
+# probe_select = ["max_variance", "average", "corr_variance", "corr_intensity"]
+# for probe in range(len(probe_select)):
+#     exp = abagen.get_expression_data(cammoun['scale033'], ibf_threshold=0,
+#                                      probe_selection=probe_select[probe], return_donors=True)
+#     exp, ds = abagen.correct.keep_stable_genes(exp,
+#                                                threshold=0,
+#                                                percentile=True,
+#                                                return_stability=True)
+#     exp = pd.concat(exp).groupby('label').mean()
+#     exp.to_csv(path+'data/expression/scale033_data_' + probe_select[probe] + '.csv')
+#     ds = {'genes': exp.columns, 'stability': ds}
+#     ds = pd.DataFrame(ds)
+#     ds.to_csv(path+'data/expression/scale033_stability_' + probe_select[probe] + '.csv')
+
+plt.ion()
+fig, axs = plt.subplots(2, 4, figsize=(20, 5))
+axs = axs.ravel()
+probe_select = ["average", "max_intensity", "max_variance", "pc_loading",
+                "corr_variance", "corr_intensity", "rnaseq"]
+for probe in range(len(probe_select)):
+    exp = pd.read_csv(path+'data/expression/scale033_data_' + probe_select[probe] + '.csv')
+    ds = pd.read_csv(path+'data/expression/scale033_stability_' + probe_select[probe] + '.csv')
+    exp_den_rho = np.zeros((len(PETgenes)))
+    for rec in range(len(PETgenes)):
+        exp_den_rho[rec] = spearmanr(PETrecept[34:, receptor_names_p.index(PETgenes_recept[rec])],
+                                     zscore(exp.iloc[leftcortex][PETgenes[rec]]))[0]
+    xarr = []
+    yarr = []
+    for i in range(len(exp_den_rho)):
+        x = exp_den_rho[i]
+        y = ds.query('genes == @PETgenes[@i]')['stability']
+        axs[probe].scatter(x, y, c='b')
+        axs[probe].text(x+0.01, y+0.01, PETgenes[i], fontsize=7)
+        xarr.append(x)
+        yarr.append(y)
+    sns.regplot(x=np.array(xarr), y=np.array(yarr),
+                scatter=False, ci=False, ax=axs[probe])
+    r, p = spearmanr(xarr, yarr)
+    print('rho = ' + str(r) + ', p = ' + str(p))
+    axs[probe].set_xlabel('gene-receptor correlation')
+    axs[probe].set_ylabel('differential stability')
+    axs[probe].set_title(probe_select[probe])
+    axs[probe].set_aspect(1.0/axs[probe].get_data_ratio(), adjustable='box')
+plt.tight_layout()
+plt.savefig(path+'figures/scatter_probe_selection.eps')
+
+"""
+Comparing across laminar layers
+"""
+
+layercorrs = dict([])
+layercorrs['rho'] = np.zeros((3, len(AUTgenes)))
+layercorrs['pspin'] = np.zeros((3, len(AUTgenes)))
+layer_data = [receptdata_s, receptdata_g, receptdata_i]
+for layer in range(len(layer_data)):
+    for g in range(len(AUTgenes)):
+        x = layer_data[layer][:, receptor_names_a.index(AUTgenes_recept[g])]
+        try:  # necessary if ibf_threshold != 0 in abagen.get_expression_data()
+            y = zscore(expression[AUTgenes[g]][:-1])
+        except KeyError:
+            continue
+        layercorrs['rho'][layer, g], layercorrs['pspin'][layer, g] = corr_spin(x, y, spins, nspins)
+np.savez(path+'results/layercorrs.npz',
+         rho=layercorrs['rho'],
+         pspin=layercorrs['pspin'])
+
+fig, ax = plt.subplots(figsize=(8, 8))
+ax.plot(layercorrs['rho'])
+# ax.legend(AUTgenes)
+ax.scatter(np.where(layercorrs['pspin'] < 0.05)[0],
+           layercorrs['rho'][layercorrs['pspin'] < 0.05])
+for g in range(len(AUTgenes)):
+    ax.text(-0.4, layercorrs['rho'][0, g], AUTgenes[g])
+ax.set_xticks(range(3))
+ax.set_xticklabels(["supragranular", "granular", "infragranular"])
+ax.set_xlim([-0.5, 2.1])
+plt.tight_layout()
+plt.savefig(path+'figures/plot_laminar_layers.eps')
 
 """
 Supplemental tables
