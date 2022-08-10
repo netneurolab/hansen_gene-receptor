@@ -1,5 +1,5 @@
 # Gene expression-receptor density associations
-This repository contains code and data created in support of my project, "Correspondence between gene expression and neurotransmitter receptor and transporter density in the human cortex".
+This repository contains code and data created in support of my project, "Correspondence between gene expression and neurotransmitter receptor and transporter density in the human cortex", now up on [bioRxiv](https://www.biorxiv.org/content/10.1101/2021.11.30.469876v1).
 All code was written in Python.
 
 ## Main analyses
