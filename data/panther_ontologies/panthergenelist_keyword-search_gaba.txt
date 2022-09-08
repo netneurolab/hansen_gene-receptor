@@ -1,0 +1,70 @@
+HUMAN|HGNC=233|UniProtKB=Q08462	Adenylate cyclase type 2;ADCY2;PTN002484530;orthologs
+HUMAN|HGNC=11046|UniProtKB=Q9NSD5	Sodium- and chloride-dependent GABA transporter 2;SLC6A13;PTN002480996;orthologs
+HUMAN|HGNC=13291|UniProtKB=P60520	Gamma-aminobutyric acid receptor-associated protein-like 2;GABARAPL2;PTN002475241;orthologs
+HUMAN|HGNC=4081|UniProtKB=P18505	Gamma-aminobutyric acid receptor subunit beta-1;GABRB1;PTN002498415;orthologs
+HUMAN|HGNC=4507|UniProtKB=O75899	Gamma-aminobutyric acid type B receptor subunit 2;GABBR2;PTN002471337;orthologs
+HUMAN|HGNC=4088|UniProtKB=Q99928	Gamma-aminobutyric acid receptor subunit gamma-3;GABRG3;PTN002498432;orthologs
+HUMAN|HGNC=1388|UniProtKB=O00555	Voltage-dependent P/Q-type calcium channel subunit alpha-1A;CACNA1A;PTN002467495;orthologs
+HUMAN|HGNC=9391|UniProtKB=P13861	cAMP-dependent protein kinase type II-alpha regulatory subunit;PRKAR2A;PTN002541696;orthologs
+HUMAN|HGNC=4398|UniProtKB=P62879	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-2;GNB2;PTN002500452;orthologs
+HUMAN|HGNC=4408|UniProtKB=P63218	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-5;GNG5;PTN002492807;orthologs
+HUMAN|HGNC=26460|UniProtKB=Q96N16	Janus kinase and microtubule-interacting protein 1;JAKMIP1;PTN002498336;orthologs
+HUMAN|HGNC=1394|UniProtKB=O43497	Voltage-dependent T-type calcium channel subunit alpha-1G;CACNA1G;PTN002467501;orthologs
+HUMAN|HGNC=9388|UniProtKB=P10644	cAMP-dependent protein kinase type I-alpha regulatory subunit;PRKAR1A;PTN002481190;orthologs
+HUMAN|HGNC=13206|UniProtKB=O60296	Trafficking kinesin-binding protein 2;TRAK2;PTN002496580;orthologs
+HUMAN|HGNC=9381|UniProtKB=P22694	cAMP-dependent protein kinase catalytic subunit beta;PRKACB;PTN002519370;orthologs
+HUMAN|HGNC=239|UniProtKB=P40145	Adenylate cyclase type 8;ADCY8;PTN002484507;orthologs
+HUMAN|HGNC=20731|UniProtKB=Q9HAV0	Guanine nucleotide-binding protein subunit beta-4;GNB4;PTN002500459;orthologs
+HUMAN|HGNC=9392|UniProtKB=P31323	cAMP-dependent protein kinase type II-beta regulatory subunit;PRKAR2B;PTN002541694;orthologs
+HUMAN|HGNC=14454|UniProtKB=Q9UN88	Gamma-aminobutyric acid receptor subunit theta;GABRQ;PTN002498408;orthologs
+HUMAN|HGNC=4078|UniProtKB=P48169	Gamma-aminobutyric acid receptor subunit alpha-4;GABRA4;PTN002498433;orthologs
+HUMAN|HGNC=9390|UniProtKB=P31321	cAMP-dependent protein kinase type I-beta regulatory subunit;PRKAR1B;PTN002481194;orthologs
+HUMAN|HGNC=4091|UniProtKB=P28476	Gamma-aminobutyric acid receptor subunit rho-2;GABRR2;PTN002498401;orthologs
+HUMAN|HGNC=4076|UniProtKB=P47869	Gamma-aminobutyric acid receptor subunit alpha-2;GABRA2;PTN002498422;orthologs
+HUMAN|HGNC=4080|UniProtKB=Q16445	Gamma-aminobutyric acid receptor subunit alpha-6;GABRA6;PTN002498434;orthologs
+HUMAN|HGNC=23|UniProtKB=P80404	4-aminobutyrate aminotransferase, mitochondrial;ABAT;PTN002534845;orthologs
+HUMAN|HGNC=232|UniProtKB=Q08828	Adenylate cyclase type 1;ADCY1;PTN002484502;orthologs
+HUMAN|HGNC=1389|UniProtKB=Q00975	Voltage-dependent N-type calcium channel subunit alpha-1B;CACNA1B;PTN002467490;orthologs
+HUMAN|HGNC=4387|UniProtKB=P08754	Guanine nucleotide-binding protein G(i) subunit alpha-3;GNAI3;PTN002469270;orthologs
+HUMAN|HGNC=4087|UniProtKB=P18507	Gamma-aminobutyric acid receptor subunit gamma-2;GABRG2;PTN002498426;orthologs
+HUMAN|HGNC=11044|UniProtKB=P48066	Sodium- and chloride-dependent GABA transporter 3;SLC6A11;PTN002481004;orthologs
+HUMAN|HGNC=4084|UniProtKB=O14764	Gamma-aminobutyric acid receptor subunit delta;GABRD;PTN002498397;orthologs
+HUMAN|HGNC=240|UniProtKB=O60503	Adenylate cyclase type 9;ADCY9;PTN002484518;orthologs
+HUMAN|HGNC=4396|UniProtKB=P62873	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1;GNB1;PTN002500457;orthologs
+HUMAN|HGNC=4086|UniProtKB=Q8N1C3	Gamma-aminobutyric acid receptor subunit gamma-1;GABRG1;PTN002498425;orthologs
+HUMAN|HGNC=4075|UniProtKB=P14867	Gamma-aminobutyric acid receptor subunit alpha-1;GABRA1;PTN002498429;orthologs
+HUMAN|HGNC=4069|UniProtKB=Q9BY60	Gamma-aminobutyric acid receptor-associated protein-like 3;GABARAPL3;PTN002475236;orthologs
+HUMAN|HGNC=4402|UniProtKB=P50151	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-10;GNG10;PTN002492809;orthologs
+HUMAN|HGNC=29947|UniProtKB=Q9UPV9	Trafficking kinesin-binding protein 1;TRAK1;PTN002496583;orthologs
+HUMAN|HGNC=4400|UniProtKB=P16520	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-3;GNB3;PTN002500451;orthologs
+HUMAN|HGNC=375|UniProtKB=P24588	A-kinase anchor protein 5;AKAP5;PTN002495614;orthologs
+HUMAN|HGNC=4070|UniProtKB=Q9UBS5	Gamma-aminobutyric acid type B receptor subunit 1;GABBR1;PTN002471329;orthologs
+HUMAN|HGNC=4077|UniProtKB=P34903	Gamma-aminobutyric acid receptor subunit alpha-3;GABRA3;PTN002498427;orthologs
+HUMAN|HGNC=6264|UniProtKB=P48549	G protein-activated inward rectifier potassium channel 1;KCNJ3;PTN002482934;orthologs
+HUMAN|HGNC=4410|UniProtKB=O60262	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-7;GNG7;PTN002492820;orthologs
+HUMAN|HGNC=4389|UniProtKB=P09471	Guanine nucleotide-binding protein G(o) subunit alpha;GNAO1;PTN002469289;orthologs
+HUMAN|HGNC=4405|UniProtKB=P63215	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-3;GNG3;PTN002492812;orthologs
+HUMAN|HGNC=4403|UniProtKB=P61952	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-11;GNG11;PTN002492818;orthologs
+HUMAN|HGNC=4082|UniProtKB=P47870	Gamma-aminobutyric acid receptor subunit beta-2;GABRB2;PTN002498410;orthologs
+HUMAN|HGNC=4083|UniProtKB=P28472	Gamma-aminobutyric acid receptor subunit beta-3;GABRB3;PTN002498409;orthologs
+HUMAN|HGNC=4090|UniProtKB=P24046	Gamma-aminobutyric acid receptor subunit rho-1;GABRR1;PTN002498405;orthologs
+HUMAN|HGNC=4089|UniProtKB=O00591	Gamma-aminobutyric acid receptor subunit pi;GABRP;PTN002498394;orthologs
+HUMAN|HGNC=19664|UniProtKB=Q9UK08	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-8;GNG8;PTN002492815;orthologs
+HUMAN|HGNC=237|UniProtKB=O43306	Adenylate cyclase type 6;ADCY6;PTN002484510;orthologs
+HUMAN|HGNC=4412|UniProtKB=O14610	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-T2;GNGT2;PTN002492817;orthologs
+HUMAN|HGNC=4079|UniProtKB=P31644	Gamma-aminobutyric acid receptor subunit alpha-5;GABRA5;PTN002498423;orthologs
+HUMAN|HGNC=4407|UniProtKB=P50150	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-4;GNG4;PTN002492813;orthologs
+HUMAN|HGNC=11018|UniProtKB=Q9H598	Vesicular inhibitory amino acid transporter;SLC32A1;PTN002505928;orthologs
+HUMAN|HGNC=236|UniProtKB=O95622	Adenylate cyclase type 5;ADCY5;PTN002484515;orthologs
+HUMAN|HGNC=4067|UniProtKB=O95166	Gamma-aminobutyric acid receptor-associated protein;GABARAP;PTN002250540;orthologs
+HUMAN|HGNC=235|UniProtKB=Q8NFM4	Adenylate cyclase type 4;ADCY4;PTN002484529;orthologs
+HUMAN|HGNC=35409|UniProtKB=A6NL88	Protein shisa-7;SHISA7;PTN002527865;orthologs
+HUMAN|HGNC=4085|UniProtKB=P78334	Gamma-aminobutyric acid receptor subunit epsilon;GABRE;PTN002498431;orthologs
+HUMAN|HGNC=4068|UniProtKB=Q9H0R8	Gamma-aminobutyric acid receptor-associated protein-like 1;GABARAPL1;PTN002475237;orthologs
+HUMAN|HGNC=4384|UniProtKB=P63096	Guanine nucleotide-binding protein G(i) subunit alpha-1;GNAI1;PTN002469272;orthologs
+HUMAN|HGNC=29568|UniProtKB=Q7Z7J7	LHFPL tetraspan subfamily member 4 protein;LHFPL4;PTN002488368;orthologs
+HUMAN|HGNC=17969|UniProtKB=A8MPY1	Gamma-aminobutyric acid receptor subunit rho-3;GABRR3;PTN002498404;orthologs
+HUMAN|HGNC=238|UniProtKB=P51828	Adenylate cyclase type 7;ADCY7;PTN002484526;orthologs
+HUMAN|HGNC=9382|UniProtKB=P22612	cAMP-dependent protein kinase catalytic subunit gamma;PRKACG;PTN002519371;orthologs
+HUMAN|HGNC=11042|UniProtKB=P30531	Sodium- and chloride-dependent GABA transporter 1;SLC6A1;PTN002480994;orthologs
+HUMAN|HGNC=9380|UniProtKB=P17612	cAMP-dependent protein kinase catalytic subunit alpha;PRKACA;PTN002519372;orthologs
