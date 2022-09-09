@@ -1,0 +1,171 @@
+HUMAN|HGNC=1408|UniProtKB=Q9UBN1	Voltage-dependent calcium channel gamma-4 subunit;CACNG4;PTN002486185;orthologs
+HUMAN|HGNC=12644|UniProtKB=Q15836	Vesicle-associated membrane protein 3;VAMP3;PTN002501372;orthologs
+HUMAN|HGNC=4390|UniProtKB=P50148	Guanine nucleotide-binding protein G(q) subunit alpha;GNAQ;PTN002469262;orthologs
+HUMAN|HGNC=19300|UniProtKB=Q8N4C7	Syntaxin-19;STX19;PTN002500610;orthologs
+HUMAN|HGNC=10982|UniProtKB=O75746	Calcium-binding mitochondrial carrier protein Aralar1;SLC25A12;PTN002515388;orthologs
+HUMAN|HGNC=8016|UniProtKB=P46459	Vesicle-fusing ATPase;NSF;PTN002507788;orthologs
+HUMAN|HGNC=29419|UniProtKB=Q5JPH6	Probable glutamate--tRNA ligase, mitochondrial;EARS2;PTN002535098;orthologs
+HUMAN|HGNC=16767|UniProtKB=Q8TCU5	Glutamate receptor ionotropic, NMDA 3A;GRIN3A;PTN002546071;orthologs
+HUMAN|HGNC=4574|UniProtKB=P48058	Glutamate receptor 4;GRIA4;PTN002498683;orthologs
+HUMAN|HGNC=4581|UniProtKB=Q13003	Glutamate receptor ionotropic, kainate 3;GRIK3;PTN002498667;orthologs
+HUMAN|HGNC=4588|UniProtKB=O15399	Glutamate receptor ionotropic, NMDA 2D;GRIN2D;PTN002540160;orthologs
+HUMAN|HGNC=13628|UniProtKB=Q8WXS5	Voltage-dependent calcium channel gamma-8 subunit;CACNG8;PTN002486184;orthologs
+HUMAN|HGNC=1406|UniProtKB=Q9Y698	Voltage-dependent calcium channel gamma-2 subunit;CACNG2;PTN002486181;orthologs
+HUMAN|HGNC=29570|UniProtKB=Q9UI32	Glutaminase liver isoform, mitochondrial;GLS2;PTN002488670;orthologs
+HUMAN|HGNC=16704|UniProtKB=Q9P2U7	Vesicular glutamate transporter 1;SLC17A7;PTN002481477;orthologs
+HUMAN|HGNC=18708|UniProtKB=Q9Y3R0	Glutamate receptor-interacting protein 1;GRIP1;PTN002469879;orthologs
+HUMAN|HGNC=4575|UniProtKB=Q9ULK0	Glutamate receptor ionotropic, delta-1;GRID1;PTN002498656;orthologs
+HUMAN|HGNC=20675|UniProtKB=Q96KN2	Beta-Ala-His dipeptidase;CNDP1;PTN002534987;orthologs
+HUMAN|HGNC=1388|UniProtKB=O00555	Voltage-dependent P/Q-type calcium channel subunit alpha-1A;CACNA1A;PTN002467495;orthologs
+HUMAN|HGNC=18062|UniProtKB=Q8TD30	Alanine aminotransferase 2;GPT2;PTN002482811;orthologs
+HUMAN|HGNC=9391|UniProtKB=P13861	cAMP-dependent protein kinase type II-alpha regulatory subunit;PRKAR2A;PTN002541696;orthologs
+HUMAN|HGNC=4398|UniProtKB=P62879	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-2;GNB2;PTN002500452;orthologs
+HUMAN|HGNC=4408|UniProtKB=P63218	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-5;GNG5;PTN002492807;orthologs
+HUMAN|HGNC=4595|UniProtKB=Q14832	Metabotropic glutamate receptor 3;GRM3;PTN002514254;orthologs
+HUMAN|HGNC=19954|UniProtKB=Q9H936	Mitochondrial glutamate carrier 1;SLC25A22;PTN002515384;orthologs
+HUMAN|HGNC=4585|UniProtKB=Q12879	Glutamate receptor ionotropic, NMDA 2A;GRIN2A;PTN002540171;orthologs
+HUMAN|HGNC=21016|UniProtKB=Q5TDP6	Lengsin;LGSN;PTN002535393;orthologs
+HUMAN|HGNC=4379|UniProtKB=P29992	Guanine nucleotide-binding protein subunit alpha-11;GNA11;PTN002469255;orthologs
+HUMAN|HGNC=9388|UniProtKB=P10644	cAMP-dependent protein kinase type I-alpha regulatory subunit;PRKAR1A;PTN002481190;orthologs
+HUMAN|HGNC=1463|UniProtKB=Q13555	Calcium/calmodulin-dependent protein kinase type II subunit gamma;CAMK2G;PTN002539359;orthologs
+HUMAN|HGNC=4598|UniProtKB=O15303	Metabotropic glutamate receptor 6;GRM6;PTN002514239;orthologs
+HUMAN|HGNC=10941|UniProtKB=P43003	Excitatory amino acid transporter 1;SLC1A3;PTN002485364;orthologs
+HUMAN|HGNC=4383|UniProtKB=P30679	Guanine nucleotide-binding protein subunit alpha-15;GNA15;PTN002469254;orthologs
+HUMAN|HGNC=4311|UniProtKB=P48506	Glutamate--cysteine ligase catalytic subunit;GCLC;PTN002476795;orthologs
+HUMAN|HGNC=17325|UniProtKB=Q9UF12	Hydroxyproline dehydrogenase;PRODH2;PTN002493352;orthologs
+HUMAN|HGNC=4432|UniProtKB=P17174	Aspartate aminotransferase, cytoplasmic;GOT1;PTN002484166;orthologs
+HUMAN|HGNC=9381|UniProtKB=P22694	cAMP-dependent protein kinase catalytic subunit beta;PRKACB;PTN002519370;orthologs
+HUMAN|HGNC=10942|UniProtKB=P43007	Neutral amino acid transporter A;SLC1A4;PTN002485360;orthologs
+HUMAN|HGNC=4404|UniProtKB=P59768	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2;GNG2;PTN002492814;orthologs
+HUMAN|HGNC=17513|UniProtKB=Q9NSB8	Homer protein homolog 2;HOMER2;PTN002475050;orthologs
+HUMAN|HGNC=4584|UniProtKB=Q05586	Glutamate receptor ionotropic, NMDA 1;GRIN1;PTN002547639;orthologs
+HUMAN|HGNC=4385|UniProtKB=P04899	Guanine nucleotide-binding protein G(i) subunit alpha-2;GNAI2;PTN002469267;orthologs
+HUMAN|HGNC=20731|UniProtKB=Q9HAV0	Guanine nucleotide-binding protein subunit beta-4;GNB4;PTN002500459;orthologs
+HUMAN|HGNC=4573|UniProtKB=P42263	Glutamate receptor 3;GRIA3;PTN002498677;orthologs
+HUMAN|HGNC=28373|UniProtKB=Q8TC90	Coiled-coil domain-containing glutamate-rich protein 1;CCER1;PTN002532866;orthologs
+HUMAN|HGNC=9392|UniProtKB=P31323	cAMP-dependent protein kinase type II-beta regulatory subunit;PRKAR2B;PTN002541694;orthologs
+HUMAN|HGNC=11131|UniProtKB=O00161	Synaptosomal-associated protein 23;SNAP23;PTN002499658;orthologs
+HUMAN|HGNC=25346|UniProtKB=Q5RHP9	Glutamate-rich protein 3;ERICH3;PTN002507069;orthologs
+HUMAN|HGNC=10939|UniProtKB=P43005	Excitatory amino acid transporter 3;SLC1A1;PTN002485374;orthologs
+HUMAN|HGNC=11133|UniProtKB=O95721	Synaptosomal-associated protein 29;SNAP29;PTN002499655;orthologs
+HUMAN|HGNC=4583|UniProtKB=Q16478	Glutamate receptor ionotropic, kainate 5;GRIK5;PTN002498662;orthologs
+HUMAN|HGNC=9390|UniProtKB=P31321	cAMP-dependent protein kinase type I-beta regulatory subunit;PRKAR1B;PTN002481194;orthologs
+HUMAN|HGNC=4247|UniProtKB=P38435	Vitamin K-dependent gamma-carboxylase;GGCX;PTN002489209;orthologs
+HUMAN|HGNC=10929|UniProtKB=Q14916	Sodium-dependent phosphate transport protein 1;SLC17A1;PTN002481479;orthologs
+HUMAN|HGNC=4589|UniProtKB=Q7Z429	Protein lifeguard 1;GRINA;PTN002510949;orthologs
+HUMAN|HGNC=1460|UniProtKB=Q9UQM7	Calcium/calmodulin-dependent protein kinase type II subunit alpha;CAMK2A;PTN002539368;orthologs
+HUMAN|HGNC=1461|UniProtKB=Q13554	Calcium/calmodulin-dependent protein kinase type II subunit beta;CAMK2B;PTN002539356;orthologs
+HUMAN|HGNC=12642|UniProtKB=P23763	Vesicle-associated membrane protein 1;VAMP1;PTN002501379;orthologs
+HUMAN|HGNC=10940|UniProtKB=P43004	Excitatory amino acid transporter 2;SLC1A2;PTN002485375;orthologs
+HUMAN|HGNC=4587|UniProtKB=Q14957	Glutamate receptor ionotropic, NMDA 2C;GRIN2C;PTN002540163;orthologs
+HUMAN|HGNC=17514|UniProtKB=Q9NSC5	Homer protein homolog 3;HOMER3;PTN002475048;orthologs
+HUMAN|HGNC=28707|UniProtKB=Q9BTK6	PAXIP1-associated glutamate-rich protein 1;PAGR1;PTN002523848;orthologs
+HUMAN|HGNC=16937|UniProtKB=O75915	PRA1 family protein 3;ARL6IP5;PTN002489944;orthologs
+HUMAN|HGNC=1389|UniProtKB=Q00975	Voltage-dependent N-type calcium channel subunit alpha-1B;CACNA1B;PTN002467490;orthologs
+HUMAN|HGNC=4552|UniProtKB=P24298	Alanine aminotransferase 1;GPT;PTN002482812;orthologs
+HUMAN|HGNC=27949|UniProtKB=Q6ZQY3	Acidic amino acid decarboxylase GADL1;GADL1;PTN002485651;orthologs
+HUMAN|HGNC=4401|UniProtKB=O14775	Guanine nucleotide-binding protein subunit beta-5;GNB5;PTN002500449;orthologs
+HUMAN|HGNC=13626|UniProtKB=P62955	Voltage-dependent calcium channel gamma-7 subunit;CACNG7;PTN002486186;orthologs
+HUMAN|HGNC=4579|UniProtKB=P39086	Glutamate receptor ionotropic, kainate 1;GRIK1;PTN002498664;orthologs
+HUMAN|HGNC=11430|UniProtKB=Q86Y82	Syntaxin-12;STX12;PTN002500638;orthologs
+HUMAN|HGNC=4387|UniProtKB=P08754	Guanine nucleotide-binding protein G(i) subunit alpha-3;GNAI3;PTN002469270;orthologs
+HUMAN|HGNC=11429|UniProtKB=O75558	Syntaxin-11;STX11;PTN002500607;orthologs
+HUMAN|HGNC=14294|UniProtKB=Q9BYB0	SH3 and multiple ankyrin repeat domains protein 3;SHANK3;PTN002516415;orthologs
+HUMAN|HGNC=17872|UniProtKB=Q9H993	Damage-control phosphatase ARMT1;ARMT1;PTN002487062;orthologs
+HUMAN|HGNC=4396|UniProtKB=P62873	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1;GNB1;PTN002500457;orthologs
+HUMAN|HGNC=4092|UniProtKB=Q99259	Glutamate decarboxylase 1;GAD1;PTN002485648;orthologs
+HUMAN|HGNC=21285|UniProtKB=Q96PN6	Adenylate cyclase type 10;ADCY10;PTN002497375;orthologs
+HUMAN|HGNC=1401|UniProtKB=Q02641	Voltage-dependent L-type calcium channel subunit beta-1;CACNB1;PTN002483530;orthologs
+HUMAN|HGNC=3788|UniProtKB=Q04609	Glutamate carboxypeptidase 2;FOLH1;PTN002470559;orthologs
+HUMAN|HGNC=4582|UniProtKB=Q16099	Glutamate receptor ionotropic, kainate 4;GRIK4;PTN002498665;orthologs
+HUMAN|HGNC=4596|UniProtKB=Q14833	Metabotropic glutamate receptor 4;GRM4;PTN002514235;orthologs
+HUMAN|HGNC=20151|UniProtKB=Q8NDX2	Vesicular glutamate transporter 3;SLC17A8;PTN002481473;orthologs
+HUMAN|HGNC=28602|UniProtKB=Q7L0X2	Glutamate-rich protein 6;ERICH6;PTN002508035;orthologs
+HUMAN|HGNC=9441|UniProtKB=P51817	cAMP-dependent protein kinase catalytic subunit PRKX;PRKX;PTN002519385;orthologs
+HUMAN|HGNC=33765|UniProtKB=Q6ZMV7	Leucine-, glutamate- and lysine-rich protein 1;LEKR1;;orthologs
+HUMAN|HGNC=44395|UniProtKB=A1L162	Glutamate-rich protein 2;ERICH2;PTN002502246;orthologs
+HUMAN|HGNC=18966|UniProtKB=Q9Y600	Cysteine sulfinic acid decarboxylase;CSAD;PTN002485652;orthologs
+HUMAN|HGNC=24437|UniProtKB=Q96KP4	Cytosolic non-specific dipeptidase;CNDP2;PTN002534988;orthologs
+HUMAN|HGNC=1033|UniProtKB=P23560	Brain-derived neurotrophic factor;BDNF;PTN002480695;orthologs
+HUMAN|HGNC=4093|UniProtKB=Q05329	Glutamate decarboxylase 2;GAD2;PTN002485647;orthologs
+HUMAN|HGNC=4402|UniProtKB=P50151	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-10;GNG10;PTN002492809;orthologs
+HUMAN|HGNC=44662|UniProtKB=I3L3R5	Coiled-coil domain-containing glutamate-rich protein 2;CCER2;;orthologs
+HUMAN|HGNC=4400|UniProtKB=P16520	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-3;GNB3;PTN002500451;orthologs
+HUMAN|HGNC=10943|UniProtKB=Q15758	Neutral amino acid transporter B(0);SLC1A5;PTN002485363;orthologs
+HUMAN|HGNC=1407|UniProtKB=O60359	Voltage-dependent calcium channel gamma-3 subunit;CACNG3;PTN002486183;orthologs
+HUMAN|HGNC=19182|UniProtKB=O94885	SAM and SH3 domain-containing protein 1;SASH1;PTN002487337;orthologs
+HUMAN|HGNC=25482|UniProtKB=Q9NWB6	Arginine and glutamate-rich protein 1;ARGLU1;PTN002527673;orthologs
+HUMAN|HGNC=8091|UniProtKB=P04181	Ornithine aminotransferase, mitochondrial;OAT;PTN002485556;orthologs
+HUMAN|HGNC=1392|UniProtKB=Q15878	Voltage-dependent R-type calcium channel subunit alpha-1E;CACNA1E;PTN002467483;orthologs
+HUMAN|HGNC=3974|UniProtKB=O95954	Formimidoyltransferase-cyclodeaminase;FTCD;PTN002486855;orthologs
+HUMAN|HGNC=11433|UniProtKB=Q16623	Syntaxin-1A;STX1A;PTN002500613;orthologs
+HUMAN|HGNC=4331|UniProtKB=O94925	Glutaminase kidney isoform, mitochondrial;GLS;PTN002488671;orthologs
+HUMAN|HGNC=4571|UniProtKB=P42261	Glutamate receptor 1;GRIA1;PTN002498680;orthologs
+HUMAN|HGNC=16703|UniProtKB=Q9P2U8	Vesicular glutamate transporter 2;SLC17A6;PTN002481474;orthologs
+HUMAN|HGNC=34491|UniProtKB=Q6ZSJ9	Protein shisa-6;SHISA6;PTN002527868;orthologs
+HUMAN|HGNC=10945|UniProtKB=O00341	Excitatory amino acid transporter 5;SLC1A7;PTN002485362;orthologs
+HUMAN|HGNC=4433|UniProtKB=P00505	Aspartate aminotransferase, mitochondrial;GOT2;PTN002484173;orthologs
+HUMAN|HGNC=18539|UniProtKB=P61266	Syntaxin-1B;STX1B;PTN002500612;orthologs
+HUMAN|HGNC=1409|UniProtKB=Q9UF02	Voltage-dependent calcium channel gamma-5 subunit;CACNG5;PTN002486188;orthologs
+HUMAN|HGNC=17792|UniProtKB=Q96AJ9	Vesicle transport through interaction with t-SNAREs homolog 1A;VTI1A;PTN002501579;orthologs
+HUMAN|HGNC=28744|UniProtKB=Q6PI25	Protein cornichon homolog 2;CNIH2;PTN002487241;orthologs
+HUMAN|HGNC=26523|UniProtKB=Q5W0A0	Glutamate-rich protein 6B;ERICH6B;PTN002508034;orthologs
+HUMAN|HGNC=20498|UniProtKB=Q7Z3D6	D-glutamate cyclase, mitochondrial;DGLUCY;PTN002528733;orthologs
+HUMAN|HGNC=4410|UniProtKB=O60262	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-7;GNG7;PTN002492820;orthologs
+HUMAN|HGNC=4389|UniProtKB=P09471	Guanine nucleotide-binding protein G(o) subunit alpha;GNAO1;PTN002469289;orthologs
+HUMAN|HGNC=4393|UniProtKB=P11488	Guanine nucleotide-binding protein G(t) subunit alpha-1;GNAT1;PTN002469266;orthologs
+HUMAN|HGNC=10944|UniProtKB=P48664	Excitatory amino acid transporter 4;SLC1A6;PTN002485372;orthologs
+HUMAN|HGNC=4405|UniProtKB=P63215	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-3;GNG3;PTN002492812;orthologs
+HUMAN|HGNC=14295|UniProtKB=Q9UPX8	SH3 and multiple ankyrin repeat domains protein 2;SHANK2;PTN002516412;orthologs
+HUMAN|HGNC=4403|UniProtKB=P61952	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-11;GNG11;PTN002492818;orthologs
+HUMAN|HGNC=9722|UniProtKB=P54886	Delta-1-pyrroline-5-carboxylate synthase;ALDH18A1;PTN002476070;orthologs
+HUMAN|HGNC=25582|UniProtKB=Q9NVC3	Putative sodium-coupled neutral amino acid transporter 7;SLC38A7;PTN002505983;orthologs
+HUMAN|HGNC=4597|UniProtKB=P41594	Metabotropic glutamate receptor 5;GRM5;PTN002514248;orthologs
+HUMAN|HGNC=18351|UniProtKB=B8ZZ34	Protein shisa-8;SHISA8;PTN002527873;orthologs
+HUMAN|HGNC=4593|UniProtKB=Q13255	Metabotropic glutamate receptor 1;GRM1;PTN002514249;orthologs
+HUMAN|HGNC=10988|UniProtKB=Q9H1K4	Mitochondrial glutamate carrier 2;SLC25A18;PTN002515385;orthologs
+HUMAN|HGNC=18464|UniProtKB=A4D2P6	Delphilin;GRID2IP;PTN002509318;orthologs
+HUMAN|HGNC=10983|UniProtKB=Q9UJS0	Calcium-binding mitochondrial carrier protein Aralar2;SLC25A13;PTN002515390;orthologs
+HUMAN|HGNC=9444|UniProtKB=O43930	Putative serine/threonine-protein kinase PRKY;PRKY;PTN002519384;orthologs
+HUMAN|HGNC=26802|UniProtKB=Q8TBE1	Protein cornichon homolog 3;CNIH3;PTN002487242;orthologs
+HUMAN|HGNC=28487|UniProtKB=Q8NHS2	Putative aspartate aminotransferase, cytoplasmic 2;GOT1L1;PTN002484164;orthologs
+HUMAN|HGNC=4594|UniProtKB=Q14416	Metabotropic glutamate receptor 2;GRM2;PTN002514253;orthologs
+HUMAN|HGNC=37231|UniProtKB=B4DS77	Protein shisa-9;SHISA9;PTN002527866;orthologs
+HUMAN|HGNC=19664|UniProtKB=Q9UK08	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-8;GNG8;PTN002492815;orthologs
+HUMAN|HGNC=4394|UniProtKB=P19087	Guanine nucleotide-binding protein G(t) subunit alpha-2;GNAT2;PTN002469263;orthologs
+HUMAN|HGNC=9395|UniProtKB=P05771	Protein kinase C beta type;PRKCB;PTN002519429;orthologs
+HUMAN|HGNC=4412|UniProtKB=O14610	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-T2;GNGT2;PTN002492817;orthologs
+HUMAN|HGNC=9394|UniProtKB=Q9NRD5	PRKCA-binding protein;PICK1;PTN002486423;orthologs
+HUMAN|HGNC=27234|UniProtKB=Q86X53	Glutamate-rich protein 1;ERICH1;PTN002503089;orthologs
+HUMAN|HGNC=4336|UniProtKB=P49448	Glutamate dehydrogenase 2, mitochondrial;GLUD2;PTN002480860;orthologs
+HUMAN|HGNC=9059|UniProtKB=Q15147	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-4;PLCB4;PTN002470080;orthologs
+HUMAN|HGNC=12643|UniProtKB=P63027	Vesicle-associated membrane protein 2;VAMP2;PTN002501381;orthologs
+HUMAN|HGNC=4599|UniProtKB=Q14831	Metabotropic glutamate receptor 7;GRM7;PTN002514238;orthologs
+HUMAN|HGNC=4572|UniProtKB=P42262	Glutamate receptor 2;GRIA2;PTN002498679;orthologs
+HUMAN|HGNC=1462|UniProtKB=Q13557	Calcium/calmodulin-dependent protein kinase type II subunit delta;CAMK2D;PTN002539365;orthologs
+HUMAN|HGNC=4407|UniProtKB=P50150	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-4;GNG4;PTN002492813;orthologs
+HUMAN|HGNC=15474|UniProtKB=Q9Y566	SH3 and multiple ankyrin repeat domains protein 1;SHANK1;PTN002516409;orthologs
+HUMAN|HGNC=4586|UniProtKB=Q13224	Glutamate receptor ionotropic, NMDA 2B;GRIN2B;PTN002540152;orthologs
+HUMAN|HGNC=34497|UniProtKB=A6NGS2	Glutamate-rich protein 4;ERICH4;PTN002532763;orthologs
+HUMAN|HGNC=4580|UniProtKB=Q13002	Glutamate receptor ionotropic, kainate 2;GRIK2;PTN002498669;orthologs
+HUMAN|HGNC=35409|UniProtKB=A6NL88	Protein shisa-7;SHISA7;PTN002527865;orthologs
+HUMAN|HGNC=19663|UniProtKB=Q9UBI6	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-12;GNG12;PTN002492821;orthologs
+HUMAN|HGNC=6180|UniProtKB=Q14643	Inositol 1,4,5-trisphosphate receptor type 1;ITPR1;PTN002492406;orthologs
+HUMAN|HGNC=4335|UniProtKB=P00367	Glutamate dehydrogenase 1, mitochondrial;GLUD1;PTN002480861;orthologs
+HUMAN|HGNC=14526|UniProtKB=Q9Y3Q0	N-acetylated-alpha-linked acidic dipeptidase 2;NAALAD2;PTN002470556;orthologs
+HUMAN|HGNC=21270|UniProtKB=Q9BQ67	Glutamate-rich WD repeat-containing protein 1;GRWD1;PTN002504705;orthologs
+HUMAN|HGNC=4384|UniProtKB=P63096	Guanine nucleotide-binding protein G(i) subunit alpha-1;GNAI1;PTN002469272;orthologs
+HUMAN|HGNC=4600|UniProtKB=O00222	Metabotropic glutamate receptor 8;GRM8;PTN002514241;orthologs
+HUMAN|HGNC=26823|UniProtKB=Q6P6B1	Glutamate-rich protein 5;ERICH5;PTN002506776;orthologs
+HUMAN|HGNC=17512|UniProtKB=Q86YM7	Homer protein homolog 1;HOMER1;PTN002475049;orthologs
+HUMAN|HGNC=16768|UniProtKB=O60391	Glutamate receptor ionotropic, NMDA 3B;GRIN3B;PTN002546074;orthologs
+HUMAN|HGNC=9382|UniProtKB=P22612	cAMP-dependent protein kinase catalytic subunit gamma;PRKACG;PTN002519371;orthologs
+HUMAN|HGNC=3824|UniProtKB=Q05932	Folylpolyglutamate synthase, mitochondrial;FPGS;PTN002476660;orthologs
+HUMAN|HGNC=23841|UniProtKB=Q9C0E4	Glutamate receptor-interacting protein 2;GRIP2;PTN002469880;orthologs
+HUMAN|HGNC=9380|UniProtKB=P17612	cAMP-dependent protein kinase catalytic subunit alpha;PRKACA;PTN002519372;orthologs
+HUMAN|HGNC=4341|UniProtKB=P15104	Glutamine synthetase;GLUL;PTN002500906;orthologs
+HUMAN|HGNC=11132|UniProtKB=P60880	Synaptosomal-associated protein 25;SNAP25;PTN002499664;orthologs
+HUMAN|HGNC=4312|UniProtKB=P48507	Glutamate--cysteine ligase regulatory subunit;GCLM;PTN002491312;orthologs
+HUMAN|HGNC=12647|UniProtKB=Q9BV40	Vesicle-associated membrane protein 8;VAMP8;PTN002501394;orthologs
+HUMAN|HGNC=16910|UniProtKB=Q9Y646	Carboxypeptidase Q;CPQ;PTN002486043;orthologs
+HUMAN|HGNC=4576|UniProtKB=O43424	Glutamate receptor ionotropic, delta-2;GRID2;PTN002498660;orthologs

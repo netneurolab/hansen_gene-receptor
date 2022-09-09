@@ -1,0 +1,29 @@
+HUMAN|HGNC=12644|UniProtKB=Q15836	Vesicle-associated membrane protein 3;VAMP3;PTN002501372;orthologs
+HUMAN|HGNC=13622|UniProtKB=Q9GZN6	Orphan sodium- and chloride-dependent neurotransmitter transporter NTT5;SLC6A16;PTN002481058;orthologs
+HUMAN|HGNC=9296|UniProtKB=Q12972	Nuclear inhibitor of protein phosphatase 1;PPP1R8;PTN002511078;orthologs
+HUMAN|HGNC=6069|UniProtKB=O95050	Indolethylamine N-methyltransferase;INMT;PTN002474582;orthologs
+HUMAN|HGNC=26441|UniProtKB=Q96N87	Inactive sodium-dependent neutral amino acid transporter B(0)AT3;SLC6A18;PTN002481053;orthologs
+HUMAN|HGNC=11131|UniProtKB=O00161	Synaptosomal-associated protein 23;SNAP23;PTN002499658;orthologs
+HUMAN|HGNC=11133|UniProtKB=O95721	Synaptosomal-associated protein 29;SNAP29;PTN002499655;orthologs
+HUMAN|HGNC=13621|UniProtKB=Q9H2J7	Sodium-dependent neutral amino acid transporter B(0)AT2;SLC6A15;PTN002481061;orthologs
+HUMAN|HGNC=30927|UniProtKB=Q9NP91	Sodium- and chloride-dependent transporter XTRP3;SLC6A20;PTN002481054;orthologs
+HUMAN|HGNC=12642|UniProtKB=P23763	Vesicle-associated membrane protein 1;VAMP1;PTN002501379;orthologs
+HUMAN|HGNC=11049|UniProtKB=Q01959	Sodium-dependent dopamine transporter;SLC6A3;PTN002481016;orthologs
+HUMAN|HGNC=11430|UniProtKB=Q86Y82	Syntaxin-12;STX12;PTN002500638;orthologs
+HUMAN|HGNC=2228|UniProtKB=P21964	Catechol O-methyltransferase;COMT;PTN002536616;orthologs
+HUMAN|HGNC=11048|UniProtKB=P23975	Sodium-dependent noradrenaline transporter;SLC6A2;PTN002481015;orthologs
+HUMAN|HGNC=10935|UniProtKB=Q05940	Synaptic vesicular amine transporter;SLC18A2;PTN002512359;orthologs
+HUMAN|HGNC=6834|UniProtKB=P27338	Amine oxidase [flavin-containing] B;MAOB;PTN002535746;orthologs
+HUMAN|HGNC=10934|UniProtKB=P54219	Chromaffin granule amine transporter;SLC18A1;PTN002512360;orthologs
+HUMAN|HGNC=9160|UniProtKB=P11086	Phenylethanolamine N-methyltransferase;PNMT;PTN002474578;orthologs
+HUMAN|HGNC=27960|UniProtKB=Q695T7	Sodium-dependent neutral amino acid transporter B(0)AT1;SLC6A19;PTN002481052;orthologs
+HUMAN|HGNC=7861|UniProtKB=P40261	Nicotinamide N-methyltransferase;NNMT;PTN002474583;orthologs
+HUMAN|HGNC=31399|UniProtKB=Q9H1V8	Sodium-dependent neutral amino acid transporter SLC6A17;SLC6A17;PTN002481056;orthologs
+HUMAN|HGNC=11442|UniProtKB=O15400	Syntaxin-7;STX7;PTN002500637;orthologs
+HUMAN|HGNC=2719|UniProtKB=P20711	Aromatic-L-amino-acid decarboxylase;DDC;PTN002485636;orthologs
+HUMAN|HGNC=6833|UniProtKB=P21397	Amine oxidase [flavin-containing] A;MAOA;PTN002535747;orthologs
+HUMAN|HGNC=12643|UniProtKB=P63027	Vesicle-associated membrane protein 2;VAMP2;PTN002501381;orthologs
+HUMAN|HGNC=17793|UniProtKB=Q9UEU0	Vesicle transport through interaction with t-SNAREs homolog 1B;VTI1B;PTN002501578;orthologs
+HUMAN|HGNC=11782|UniProtKB=P07101	Tyrosine 3-monooxygenase;TH;PTN002479349;orthologs
+HUMAN|HGNC=2689|UniProtKB=P09172	Dopamine beta-hydroxylase;DBH;PTN002468400;orthologs
+HUMAN|HGNC=11132|UniProtKB=P60880	Synaptosomal-associated protein 25;SNAP25;PTN002499664;orthologs

@@ -1,0 +1,26 @@
+HUMAN|HGNC=9056|UniProtKB=Q01970	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-3;PLCB3;PTN002470083;orthologs
+HUMAN|HGNC=1388|UniProtKB=O00555	Voltage-dependent P/Q-type calcium channel subunit alpha-1A;CACNA1A;PTN002467495;orthologs
+HUMAN|HGNC=15917|UniProtKB=Q9NQ66	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-1;PLCB1;PTN002470082;orthologs
+HUMAN|HGNC=4398|UniProtKB=P62879	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-2;GNB2;PTN002500452;orthologs
+HUMAN|HGNC=4408|UniProtKB=P63218	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-5;GNG5;PTN002492807;orthologs
+HUMAN|HGNC=1394|UniProtKB=O43497	Voltage-dependent T-type calcium channel subunit alpha-1G;CACNA1G;PTN002467501;orthologs
+HUMAN|HGNC=20731|UniProtKB=Q9HAV0	Guanine nucleotide-binding protein subunit beta-4;GNB4;PTN002500459;orthologs
+HUMAN|HGNC=2160|UniProtKB=P34972	Cannabinoid receptor 2;CNR2;PTN002503557;orthologs
+HUMAN|HGNC=1389|UniProtKB=Q00975	Voltage-dependent N-type calcium channel subunit alpha-1B;CACNA1B;PTN002467490;orthologs
+HUMAN|HGNC=4387|UniProtKB=P08754	Guanine nucleotide-binding protein G(i) subunit alpha-3;GNAI3;PTN002469270;orthologs
+HUMAN|HGNC=4396|UniProtKB=P62873	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1;GNB1;PTN002500457;orthologs
+HUMAN|HGNC=2159|UniProtKB=P21554	Cannabinoid receptor 1;CNR1;PTN002503563;orthologs
+HUMAN|HGNC=4402|UniProtKB=P50151	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-10;GNG10;PTN002492809;orthologs
+HUMAN|HGNC=4400|UniProtKB=P16520	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-3;GNB3;PTN002500451;orthologs
+HUMAN|HGNC=24546|UniProtKB=Q96F85	CB1 cannabinoid receptor-interacting protein 1;CNRIP1;PTN002528413;orthologs
+HUMAN|HGNC=4410|UniProtKB=O60262	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-7;GNG7;PTN002492820;orthologs
+HUMAN|HGNC=4389|UniProtKB=P09471	Guanine nucleotide-binding protein G(o) subunit alpha;GNAO1;PTN002469289;orthologs
+HUMAN|HGNC=4405|UniProtKB=P63215	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-3;GNG3;PTN002492812;orthologs
+HUMAN|HGNC=4403|UniProtKB=P61952	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-11;GNG11;PTN002492818;orthologs
+HUMAN|HGNC=4597|UniProtKB=P41594	Metabotropic glutamate receptor 5;GRM5;PTN002514248;orthologs
+HUMAN|HGNC=4593|UniProtKB=Q13255	Metabotropic glutamate receptor 1;GRM1;PTN002514249;orthologs
+HUMAN|HGNC=19664|UniProtKB=Q9UK08	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-8;GNG8;PTN002492815;orthologs
+HUMAN|HGNC=4412|UniProtKB=O14610	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-T2;GNGT2;PTN002492817;orthologs
+HUMAN|HGNC=4407|UniProtKB=P50150	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-4;GNG4;PTN002492813;orthologs
+HUMAN|HGNC=4384|UniProtKB=P63096	Guanine nucleotide-binding protein G(i) subunit alpha-1;GNAI1;PTN002469272;orthologs
+HUMAN|HGNC=9055|UniProtKB=Q00722	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-2;PLCB2;PTN002470081;orthologs

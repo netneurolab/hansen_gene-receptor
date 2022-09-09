@@ -1,0 +1,62 @@
+HUMAN|HGNC=233|UniProtKB=Q08462	Adenylate cyclase type 2;ADCY2;PTN002484530;orthologs
+HUMAN|HGNC=9056|UniProtKB=Q01970	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-3;PLCB3;PTN002470083;orthologs
+HUMAN|HGNC=4390|UniProtKB=P50148	Guanine nucleotide-binding protein G(q) subunit alpha;GNAQ;PTN002469262;orthologs
+HUMAN|HGNC=9061|UniProtKB=Q8N3E9	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase delta-3;PLCD3;PTN002470119;orthologs
+HUMAN|HGNC=9404|UniProtKB=P41743	Protein kinase C iota type;PRKCI;PTN002519422;orthologs
+HUMAN|HGNC=15917|UniProtKB=Q9NQ66	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-1;PLCB1;PTN002470082;orthologs
+HUMAN|HGNC=9391|UniProtKB=P13861	cAMP-dependent protein kinase type II-alpha regulatory subunit;PRKAR2A;PTN002541696;orthologs
+HUMAN|HGNC=4398|UniProtKB=P62879	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-2;GNB2;PTN002500452;orthologs
+HUMAN|HGNC=4408|UniProtKB=P63218	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-5;GNG5;PTN002492807;orthologs
+HUMAN|HGNC=4379|UniProtKB=P29992	Guanine nucleotide-binding protein subunit alpha-11;GNA11;PTN002469255;orthologs
+HUMAN|HGNC=9381|UniProtKB=P22694	cAMP-dependent protein kinase catalytic subunit beta;PRKACB;PTN002519370;orthologs
+HUMAN|HGNC=5182|UniProtKB=P35367	Histamine H1 receptor;HRH1;PTN002538164;orthologs
+HUMAN|HGNC=6182|UniProtKB=Q14573	Inositol 1,4,5-trisphosphate receptor type 3;ITPR3;PTN002492399;orthologs
+HUMAN|HGNC=4404|UniProtKB=P59768	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2;GNG2;PTN002492814;orthologs
+HUMAN|HGNC=9393|UniProtKB=P17252	Protein kinase C alpha type;PRKCA;PTN002519431;orthologs
+HUMAN|HGNC=20731|UniProtKB=Q9HAV0	Guanine nucleotide-binding protein subunit beta-4;GNB4;PTN002500459;orthologs
+HUMAN|HGNC=4855|UniProtKB=P19113	Histidine decarboxylase;HDC;PTN002485635;orthologs
+HUMAN|HGNC=9392|UniProtKB=P31323	cAMP-dependent protein kinase type II-beta regulatory subunit;PRKAR2B;PTN002541694;orthologs
+HUMAN|HGNC=9060|UniProtKB=P51178	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase delta-1;PLCD1;PTN002470121;orthologs
+HUMAN|HGNC=29185|UniProtKB=Q4KWH8	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase eta-1;PLCH1;PTN002470095;orthologs
+HUMAN|HGNC=19218|UniProtKB=Q86YW0	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase zeta-1;PLCZ1;PTN002470116;orthologs
+HUMAN|HGNC=9064|UniProtKB=Q9UPR0	Inactive phospholipase C-like protein 2;PLCL2;PTN002470088;orthologs
+HUMAN|HGNC=4401|UniProtKB=O14775	Guanine nucleotide-binding protein subunit beta-5;GNB5;PTN002500449;orthologs
+HUMAN|HGNC=4392|UniProtKB=Q5JWF2	Guanine nucleotide-binding protein G(s) subunit alpha isoforms XLas;GNAS;PTN002469287;orthologs
+HUMAN|HGNC=5028|UniProtKB=P50135	Histamine N-methyltransferase;HNMT;;orthologs
+HUMAN|HGNC=17383|UniProtKB=Q9H3N8	Histamine H4 receptor;HRH4;PTN002544184;orthologs
+HUMAN|HGNC=5184|UniProtKB=Q9Y5N1	Histamine H3 receptor;HRH3;PTN002544185;orthologs
+HUMAN|HGNC=4396|UniProtKB=P62873	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1;GNB1;PTN002500457;orthologs
+HUMAN|HGNC=5183|UniProtKB=P25021	Histamine H2 receptor;HRH2;PTN002537105;orthologs
+HUMAN|HGNC=9441|UniProtKB=P51817	cAMP-dependent protein kinase catalytic subunit PRKX;PRKX;PTN002519385;orthologs
+HUMAN|HGNC=11633|UniProtKB=P15923	Transcription factor E2-alpha;TCF3;PTN002483218;orthologs
+HUMAN|HGNC=12022|UniProtKB=P13693	Translationally-controlled tumor protein;TPT1;PTN002485615;orthologs
+HUMAN|HGNC=4402|UniProtKB=P50151	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-10;GNG10;PTN002492809;orthologs
+HUMAN|HGNC=9401|UniProtKB=Q02156	Protein kinase C epsilon type;PRKCE;PTN002519419;orthologs
+HUMAN|HGNC=4400|UniProtKB=P16520	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-3;GNB3;PTN002500451;orthologs
+HUMAN|HGNC=6181|UniProtKB=Q14571	Inositol 1,4,5-trisphosphate receptor type 2;ITPR2;PTN002492403;orthologs
+HUMAN|HGNC=9062|UniProtKB=Q9BRC7	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase delta-4;PLCD4;PTN002470120;orthologs
+HUMAN|HGNC=9412|UniProtKB=Q05513	Protein kinase C zeta type;PRKCZ;PTN002519421;orthologs
+HUMAN|HGNC=4410|UniProtKB=O60262	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-7;GNG7;PTN002492820;orthologs
+HUMAN|HGNC=4405|UniProtKB=P63215	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-3;GNG3;PTN002492812;orthologs
+HUMAN|HGNC=4388|UniProtKB=P38405	Guanine nucleotide-binding protein G(olf) subunit alpha;GNAL;PTN002469286;orthologs
+HUMAN|HGNC=9065|UniProtKB=P19174	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase gamma-1;PLCG1;PTN002470111;orthologs
+HUMAN|HGNC=9444|UniProtKB=O43930	Putative serine/threonine-protein kinase PRKY;PRKY;PTN002519384;orthologs
+HUMAN|HGNC=9063|UniProtKB=Q15111	Inactive phospholipase C-like protein 1;PLCL1;PTN002470086;orthologs
+HUMAN|HGNC=19664|UniProtKB=Q9UK08	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-8;GNG8;PTN002492815;orthologs
+HUMAN|HGNC=9395|UniProtKB=P05771	Protein kinase C beta type;PRKCB;PTN002519429;orthologs
+HUMAN|HGNC=9402|UniProtKB=P05129	Protein kinase C gamma type;PRKCG;PTN002519430;orthologs
+HUMAN|HGNC=4412|UniProtKB=O14610	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-T2;GNGT2;PTN002492817;orthologs
+HUMAN|HGNC=9410|UniProtKB=Q04759	Protein kinase C theta type;PRKCQ;PTN002519425;orthologs
+HUMAN|HGNC=9059|UniProtKB=Q15147	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-4;PLCB4;PTN002470080;orthologs
+HUMAN|HGNC=4407|UniProtKB=P50150	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-4;GNG4;PTN002492813;orthologs
+HUMAN|HGNC=19663|UniProtKB=Q9UBI6	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-12;GNG12;PTN002492821;orthologs
+HUMAN|HGNC=6180|UniProtKB=Q14643	Inositol 1,4,5-trisphosphate receptor type 1;ITPR1;PTN002492406;orthologs
+HUMAN|HGNC=17175|UniProtKB=Q9P212	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase epsilon-1;PLCE1;PTN002470092;orthologs
+HUMAN|HGNC=9403|UniProtKB=P24723	Protein kinase C eta type;PRKCH;PTN002519418;orthologs
+HUMAN|HGNC=238|UniProtKB=P51828	Adenylate cyclase type 7;ADCY7;PTN002484526;orthologs
+HUMAN|HGNC=9382|UniProtKB=P22612	cAMP-dependent protein kinase catalytic subunit gamma;PRKACG;PTN002519371;orthologs
+HUMAN|HGNC=9055|UniProtKB=Q00722	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-2;PLCB2;PTN002470081;orthologs
+HUMAN|HGNC=9066|UniProtKB=P16885	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase gamma-2;PLCG2;PTN002470108;orthologs
+HUMAN|HGNC=9380|UniProtKB=P17612	cAMP-dependent protein kinase catalytic subunit alpha;PRKACA;PTN002519372;orthologs
+HUMAN|HGNC=9399|UniProtKB=Q05655	Protein kinase C delta type;PRKCD;PTN002519426;orthologs
+HUMAN|HGNC=4382|UniProtKB=O95837	Guanine nucleotide-binding protein subunit alpha-14;GNA14;PTN002469260;orthologs

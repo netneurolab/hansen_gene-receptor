@@ -1,0 +1,191 @@
+HUMAN|HGNC=1963|UniProtKB=Q05901	Neuronal acetylcholine receptor subunit beta-3;CHRNB3;PTN002498459;orthologs
+HUMAN|HGNC=29822|UniProtKB=Q9Y6X6	Unconventional myosin-XVI;MYO16;PTN002490702;orthologs
+HUMAN|HGNC=26105|UniProtKB=Q7Z736	Pleckstrin homology domain-containing family H member 3;PLEKHH3;PTN002505326;orthologs
+HUMAN|HGNC=7609|UniProtKB=Q13459	Unconventional myosin-IXb;MYO9B;PTN002490693;orthologs
+HUMAN|Ensembl=ENSG00000282088|UniProtKB=A0A1W2PN81	Neuronal acetylcholine receptor subunit alpha-7;CHRNA7;PTN004502722;orthologs
+HUMAN|HGNC=1965|UniProtKB=Q07001	Acetylcholine receptor subunit delta;CHRND;PTN002498466;orthologs
+HUMAN|HGNC=12644|UniProtKB=Q15836	Vesicle-associated membrane protein 3;VAMP3;PTN002501372;orthologs
+HUMAN|HGNC=6270|UniProtKB=Q92806	G protein-activated inward rectifier potassium channel 3;KCNJ9;PTN002482936;orthologs
+HUMAN|HGNC=4390|UniProtKB=P50148	Guanine nucleotide-binding protein G(q) subunit alpha;GNAQ;PTN002469262;orthologs
+HUMAN|HGNC=19300|UniProtKB=Q8N4C7	Syntaxin-19;STX19;PTN002500610;orthologs
+HUMAN|HGNC=7594|UniProtKB=Q9UKN7	Unconventional myosin-XV;MYO15A;PTN002490896;orthologs
+HUMAN|HGNC=7598|UniProtKB=O94832	Unconventional myosin-Id;MYO1D;PTN002490894;orthologs
+HUMAN|HGNC=7605|UniProtKB=Q9UM54	Unconventional myosin-VI;MYO6;PTN002490724;orthologs
+HUMAN|HGNC=16767|UniProtKB=Q8TCU5	Glutamate receptor ionotropic, NMDA 3A;GRIN3A;PTN002546071;orthologs
+HUMAN|HGNC=132|UniProtKB=P60709	Actin, cytoplasmic 1;ACTB;PTN002485092;orthologs
+HUMAN|HGNC=14025|UniProtKB=Q9GZV3	High affinity choline transporter 1;SLC5A7;PTN002483489;orthologs
+HUMAN|HGNC=7601|UniProtKB=Q8NEV4	Myosin-IIIa;MYO3A;PTN002490703;orthologs
+HUMAN|HGNC=4588|UniProtKB=O15399	Glutamate receptor ionotropic, NMDA 2D;GRIN2D;PTN002540160;orthologs
+HUMAN|HGNC=7579|UniProtKB=P35579	Myosin-9;MYH9;PTN002490807;orthologs
+HUMAN|HGNC=15963|UniProtKB=Q15825	Neuronal acetylcholine receptor subunit alpha-6;CHRNA6;PTN002498476;orthologs
+HUMAN|HGNC=7604|UniProtKB=Q9NQX4	Unconventional myosin-Vc;MYO5C;PTN002490720;orthologs
+HUMAN|HGNC=9404|UniProtKB=P41743	Protein kinase C iota type;PRKCI;PTN002519422;orthologs
+HUMAN|HGNC=9391|UniProtKB=P13861	cAMP-dependent protein kinase type II-alpha regulatory subunit;PRKAR2A;PTN002541696;orthologs
+HUMAN|HGNC=4398|UniProtKB=P62879	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-2;GNB2;PTN002500452;orthologs
+HUMAN|HGNC=168|UniProtKB=P42025	Beta-centractin;ACTR1B;PTN002484956;orthologs
+HUMAN|HGNC=4408|UniProtKB=P63218	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-5;GNG5;PTN002492807;orthologs
+HUMAN|HGNC=7571|UniProtKB=Q9UKX3	Myosin-13;MYH13;PTN002490836;orthologs
+HUMAN|HGNC=4585|UniProtKB=Q12879	Glutamate receptor ionotropic, NMDA 2A;GRIN2A;PTN002540171;orthologs
+HUMAN|HGNC=4379|UniProtKB=P29992	Guanine nucleotide-binding protein subunit alpha-11;GNA11;PTN002469255;orthologs
+HUMAN|HGNC=9388|UniProtKB=P10644	cAMP-dependent protein kinase type I-alpha regulatory subunit;PRKAR1A;PTN002481190;orthologs
+HUMAN|HGNC=24022|UniProtKB=Q9BYD9	Actin-related protein T3;ACTRT3;PTN002485001;orthologs
+HUMAN|HGNC=9381|UniProtKB=P22694	cAMP-dependent protein kinase catalytic subunit beta;PRKACB;PTN002519370;orthologs
+HUMAN|HGNC=1393|UniProtKB=O60840	Voltage-dependent L-type calcium channel subunit alpha-1F;CACNA1F;PTN002467475;orthologs
+HUMAN|HGNC=6182|UniProtKB=Q14573	Inositol 1,4,5-trisphosphate receptor type 3;ITPR3;PTN002492399;orthologs
+HUMAN|HGNC=4404|UniProtKB=P59768	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2;GNG2;PTN002492814;orthologs
+HUMAN|HGNC=9393|UniProtKB=P17252	Protein kinase C alpha type;PRKCA;PTN002519431;orthologs
+HUMAN|HGNC=4584|UniProtKB=Q05586	Glutamate receptor ionotropic, NMDA 1;GRIN1;PTN002547639;orthologs
+HUMAN|HGNC=7606|UniProtKB=Q13402	Unconventional myosin-VIIa;MYO7A;PTN002490687;orthologs
+HUMAN|HGNC=28689|UniProtKB=Q8N4M1	Choline transporter-like protein 3;SLC44A3;PTN002487834;orthologs
+HUMAN|HGNC=4385|UniProtKB=P04899	Guanine nucleotide-binding protein G(i) subunit alpha-2;GNAI2;PTN002469267;orthologs
+HUMAN|HGNC=1964|UniProtKB=P30926	Neuronal acetylcholine receptor subunit beta-4;CHRNB4;PTN002498473;orthologs
+HUMAN|HGNC=20731|UniProtKB=Q9HAV0	Guanine nucleotide-binding protein subunit beta-4;GNB4;PTN002500459;orthologs
+HUMAN|HGNC=11440|UniProtKB=Q13190	Syntaxin-5;STX5;PTN002500644;orthologs
+HUMAN|HGNC=1397|UniProtKB=Q13698	Voltage-dependent L-type calcium channel subunit alpha-1S;CACNA1S;PTN002467473;orthologs
+HUMAN|HGNC=9392|UniProtKB=P31323	cAMP-dependent protein kinase type II-beta regulatory subunit;PRKAR2B;PTN002541694;orthologs
+HUMAN|HGNC=1956|UniProtKB=Q15822	Neuronal acetylcholine receptor subunit alpha-2;CHRNA2;PTN002498463;orthologs
+HUMAN|HGNC=7576|UniProtKB=P13533	Myosin-6;MYH6;PTN002490827;orthologs
+HUMAN|HGNC=11131|UniProtKB=O00161	Synaptosomal-associated protein 23;SNAP23;PTN002499658;orthologs
+HUMAN|HGNC=11133|UniProtKB=O95721	Synaptosomal-associated protein 29;SNAP29;PTN002499655;orthologs
+HUMAN|HGNC=9390|UniProtKB=P31321	cAMP-dependent protein kinase type I-beta regulatory subunit;PRKAR1B;PTN002481194;orthologs
+HUMAN|HGNC=7600|UniProtKB=O00160	Unconventional myosin-If;MYO1F;PTN002490778;orthologs
+HUMAN|HGNC=1966|UniProtKB=Q04844	Acetylcholine receptor subunit epsilon;CHRNE;PTN002498472;orthologs
+HUMAN|HGNC=1955|UniProtKB=P02708	Acetylcholine receptor subunit alpha;CHRNA1;PTN002498461;orthologs
+HUMAN|HGNC=28644|UniProtKB=Q86UF2	cTAGE family member 6;CTAGE6;PTN002508837;orthologs
+HUMAN|HGNC=1957|UniProtKB=P32297	Neuronal acetylcholine receptor subunit alpha-3;CHRNA3;PTN002498458;orthologs
+HUMAN|HGNC=9863|UniProtKB=Q13702	43 kDa receptor-associated protein of the synapse;RAPSN;PTN002467969;orthologs
+HUMAN|HGNC=12642|UniProtKB=P23763	Vesicle-associated membrane protein 1;VAMP1;PTN002501379;orthologs
+HUMAN|HGNC=7608|UniProtKB=B2RTY4	Unconventional myosin-IXa;MYO9A;PTN002490691;orthologs
+HUMAN|HGNC=1390|UniProtKB=Q13936	Voltage-dependent L-type calcium channel subunit alpha-1C;CACNA1C;PTN002467478;orthologs
+HUMAN|HGNC=1952|UniProtKB=P20309	Muscarinic acetylcholine receptor M3;CHRM3;PTN002538175;orthologs
+HUMAN|HGNC=33895|UniProtKB=Q6S8J3	POTE ankyrin domain family member E;POTEE;PTN002516354;orthologs
+HUMAN|HGNC=4587|UniProtKB=Q14957	Glutamate receptor ionotropic, NMDA 2C;GRIN2C;PTN002540163;orthologs
+HUMAN|HGNC=1958|UniProtKB=P43681	Neuronal acetylcholine receptor subunit alpha-4;CHRNA4;PTN002498477;orthologs
+HUMAN|HGNC=4401|UniProtKB=O14775	Guanine nucleotide-binding protein subunit beta-5;GNB5;PTN002500449;orthologs
+HUMAN|HGNC=18150|UniProtKB=Q8IUG5	Unconventional myosin-XVIIIb;MYO18B;PTN002490815;orthologs
+HUMAN|HGNC=31104|UniProtKB=Q92614	Unconventional myosin-XVIIIa;MYO18A;PTN002490818;orthologs
+HUMAN|HGNC=11430|UniProtKB=Q86Y82	Syntaxin-12;STX12;PTN002500638;orthologs
+HUMAN|HGNC=4387|UniProtKB=P08754	Guanine nucleotide-binding protein G(i) subunit alpha-3;GNAI3;PTN002469270;orthologs
+HUMAN|HGNC=12017|UniProtKB=P12270	Nucleoprotein TPR;TPR;PTN002498051;orthologs
+HUMAN|HGNC=11429|UniProtKB=O75558	Syntaxin-11;STX11;PTN002500607;orthologs
+HUMAN|HGNC=17383|UniProtKB=Q9H3N8	Histamine H4 receptor;HRH4;PTN002544184;orthologs
+HUMAN|HGNC=7567|UniProtKB=P12882	Myosin-1;MYH1;PTN002490847;orthologs
+HUMAN|HGNC=7572|UniProtKB=Q9UKX2	Myosin-2;MYH2;PTN002490839;orthologs
+HUMAN|HGNC=7596|UniProtKB=O43795	Unconventional myosin-Ib;MYO1B;PTN002490890;orthologs
+HUMAN|HGNC=5184|UniProtKB=Q9Y5N1	Histamine H3 receptor;HRH3;PTN002544185;orthologs
+HUMAN|HGNC=983|UniProtKB=P06276	Cholinesterase;BCHE;PTN002538224;orthologs
+HUMAN|HGNC=108|UniProtKB=P22303	Acetylcholinesterase;ACHE;PTN002480196;orthologs
+HUMAN|HGNC=24945|UniProtKB=Q8IV16	Glycosylphosphatidylinositol-anchored high density lipoprotein-binding protein 1;GPIHBP1;PTN002497721;orthologs
+HUMAN|HGNC=4396|UniProtKB=P62873	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1;GNB1;PTN002500457;orthologs
+HUMAN|HGNC=7593|UniProtKB=Q9HD67	Unconventional myosin-X;MYO10;PTN002490681;orthologs
+HUMAN|HGNC=21285|UniProtKB=Q96PN6	Adenylate cyclase type 10;ADCY10;PTN002497375;orthologs
+HUMAN|HGNC=13880|UniProtKB=B0I1T2	Unconventional myosin-Ig;MYO1G;PTN002490892;orthologs
+HUMAN|HGNC=1401|UniProtKB=Q02641	Voltage-dependent L-type calcium channel subunit beta-1;CACNB1;PTN002483530;orthologs
+HUMAN|HGNC=18706|UniProtKB=Q4V328	GRIP1-associated protein 1;GRIPAP1;PTN002498711;orthologs
+HUMAN|HGNC=11439|UniProtKB=Q12846	Syntaxin-4;STX4;PTN002500609;orthologs
+HUMAN|HGNC=7595|UniProtKB=Q9UBC5	Unconventional myosin-Ia;MYO1A;PTN002490889;orthologs
+HUMAN|HGNC=13935|UniProtKB=O95868	Lymphocyte antigen 6 complex locus protein G6d;LY6G6D;PTN002529336;orthologs
+HUMAN|HGNC=6296|UniProtKB=O43526	Potassium voltage-gated channel subfamily KQT member 2;KCNQ2;PTN002479941;orthologs
+HUMAN|HGNC=1951|UniProtKB=P08172	Muscarinic acetylcholine receptor M2;CHRM2;PTN002538167;orthologs
+HUMAN|HGNC=7577|UniProtKB=P12883	Myosin-7;MYH7;PTN002490854;orthologs
+HUMAN|HGNC=9441|UniProtKB=P51817	cAMP-dependent protein kinase catalytic subunit PRKX;PRKX;PTN002519385;orthologs
+HUMAN|HGNC=1967|UniProtKB=P07510	Acetylcholine receptor subunit gamma;CHRNG;PTN002498467;orthologs
+HUMAN|HGNC=26234|UniProtKB=Q96H55	Unconventional myosin-XIX;MYO19;PTN002490713;orthologs
+HUMAN|HGNC=7568|UniProtKB=P35580	Myosin-10;MYH10;PTN002490808;orthologs
+HUMAN|HGNC=145|UniProtKB=P63267	Actin, gamma-enteric smooth muscle;ACTG2;PTN002485038;orthologs
+HUMAN|HGNC=4402|UniProtKB=P50151	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-10;GNG10;PTN002492809;orthologs
+HUMAN|HGNC=130|UniProtKB=P62736	Actin, aortic smooth muscle;ACTA2;PTN002485040;orthologs
+HUMAN|HGNC=9401|UniProtKB=Q02156	Protein kinase C epsilon type;PRKCE;PTN002519419;orthologs
+HUMAN|HGNC=10936|UniProtKB=Q16572	Vesicular acetylcholine transporter;SLC18A3;PTN002512357;orthologs
+HUMAN|HGNC=4400|UniProtKB=P16520	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-3;GNB3;PTN002500451;orthologs
+HUMAN|HGNC=7603|UniProtKB=Q9ULV0	Unconventional myosin-Vb;MYO5B;PTN002490717;orthologs
+HUMAN|HGNC=18746|UniProtKB=P55000	Secreted Ly-6/uPAR-related protein 1;SLURP1;PTN002467421;orthologs
+HUMAN|HGNC=15781|UniProtKB=Q494W8	CHRNA7-FAM7A fusion protein;CHRFAM7A;PTN002498507;orthologs
+HUMAN|HGNC=37093|UniProtKB=P0CG38	POTE ankyrin domain family member I;POTEI;PTN002516350;orthologs
+HUMAN|HGNC=28431|UniProtKB=Q8N2G4	Ly6/PLAUR domain-containing protein 1;LYPD1;PTN002467419;orthologs
+HUMAN|HGNC=13800|UniProtKB=Q9GZZ6	Neuronal acetylcholine receptor subunit alpha-10;CHRNA10;PTN002498440;orthologs
+HUMAN|HGNC=6181|UniProtKB=Q14571	Inositol 1,4,5-trisphosphate receptor type 2;ITPR2;PTN002492403;orthologs
+HUMAN|HGNC=143|UniProtKB=P68032	Actin, alpha cardiac muscle 1;ACTC1;PTN002485041;orthologs
+HUMAN|HGNC=1402|UniProtKB=Q08289	Voltage-dependent L-type calcium channel subunit beta-2;CACNB2;PTN002483534;orthologs
+HUMAN|HGNC=11433|UniProtKB=Q16623	Syntaxin-1A;STX1A;PTN002500613;orthologs
+HUMAN|HGNC=7597|UniProtKB=O00159	Unconventional myosin-Ic;MYO1C;PTN002490901;orthologs
+HUMAN|HGNC=17999|UniProtKB=Q6P5Z2	Serine/threonine-protein kinase N3;PKN3;PTN002519416;orthologs
+HUMAN|HGNC=1912|UniProtKB=P28329	Choline O-acetyltransferase;CHAT;PTN002503178;orthologs
+HUMAN|HGNC=9412|UniProtKB=Q05513	Protein kinase C zeta type;PRKCZ;PTN002519421;orthologs
+HUMAN|HGNC=6264|UniProtKB=P48549	G protein-activated inward rectifier potassium channel 1;KCNJ3;PTN002482934;orthologs
+HUMAN|HGNC=18539|UniProtKB=P61266	Syntaxin-1B;STX1B;PTN002500612;orthologs
+HUMAN|HGNC=1954|UniProtKB=P08912	Muscarinic acetylcholine receptor M5;CHRM5;PTN002538165;orthologs
+HUMAN|HGNC=7607|UniProtKB=Q6PIF6	Unconventional myosin-VIIb;MYO7B;PTN002490684;orthologs
+HUMAN|HGNC=4410|UniProtKB=O60262	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-7;GNG7;PTN002492820;orthologs
+HUMAN|HGNC=4389|UniProtKB=P09471	Guanine nucleotide-binding protein G(o) subunit alpha;GNAO1;PTN002469289;orthologs
+HUMAN|HGNC=17042|UniProtKB=Q9UHX1	Poly(U)-binding-splicing factor PUF60;PUF60;PTN002545584;orthologs
+HUMAN|HGNC=23212|UniProtKB=Q7Z406	Myosin-14;MYH14;PTN002490805;orthologs
+HUMAN|HGNC=4393|UniProtKB=P11488	Guanine nucleotide-binding protein G(t) subunit alpha-1;GNAT1;PTN002469266;orthologs
+HUMAN|HGNC=11431|UniProtKB=O14662	Syntaxin-16;STX16;PTN002500651;orthologs
+HUMAN|HGNC=4405|UniProtKB=P63215	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-3;GNG3;PTN002492812;orthologs
+HUMAN|HGNC=4403|UniProtKB=P61952	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-11;GNG11;PTN002492818;orthologs
+HUMAN|HGNC=11055|UniProtKB=P48029	Sodium- and chloride-dependent creatine transporter 1;SLC6A8;PTN002481023;orthologs
+HUMAN|HGNC=1953|UniProtKB=P08173	Muscarinic acetylcholine receptor M4;CHRM4;PTN002538170;orthologs
+HUMAN|HGNC=25549|UniProtKB=P0DP57	Secreted Ly-6/uPAR domain-containing protein 2;SLURP2;PTN004496102;orthologs
+HUMAN|HGNC=9444|UniProtKB=O43930	Putative serine/threonine-protein kinase PRKY;PRKY;PTN002519384;orthologs
+HUMAN|HGNC=31073|UniProtKB=Q9Y2K3	Myosin-15;MYH15;PTN002490831;orthologs
+HUMAN|HGNC=17780|UniProtKB=Q562R1	Beta-actin-like protein 2;ACTBL2;PTN002485088;orthologs
+HUMAN|HGNC=1960|UniProtKB=P36544	Neuronal acetylcholine receptor subunit alpha-7;CHRNA7;PTN002498508;orthologs
+HUMAN|HGNC=15576|UniProtKB=Q8WXR4	Myosin-IIIb;MYO3B;PTN002490704;orthologs
+HUMAN|HGNC=37294|UniProtKB=P0CG41	cTAGE family member 8;CTAGE8;PTN002508839;orthologs
+HUMAN|HGNC=19664|UniProtKB=Q9UK08	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-8;GNG8;PTN002492815;orthologs
+HUMAN|HGNC=4394|UniProtKB=P19087	Guanine nucleotide-binding protein G(t) subunit alpha-2;GNAT2;PTN002469263;orthologs
+HUMAN|HGNC=9395|UniProtKB=P05771	Protein kinase C beta type;PRKCB;PTN002519429;orthologs
+HUMAN|HGNC=9402|UniProtKB=P05129	Protein kinase C gamma type;PRKCG;PTN002519430;orthologs
+HUMAN|HGNC=4412|UniProtKB=O14610	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-T2;GNGT2;PTN002492817;orthologs
+HUMAN|HGNC=129|UniProtKB=P68133	Actin, alpha skeletal muscle;ACTA1;PTN002485046;orthologs
+HUMAN|HGNC=9405|UniProtKB=Q16512	Serine/threonine-protein kinase N1;PKN1;PTN002519413;orthologs
+HUMAN|HGNC=1961|UniProtKB=P11230	Acetylcholine receptor subunit beta;CHRNB1;PTN002498468;orthologs
+HUMAN|HGNC=14079|UniProtKB=Q9UGM1	Neuronal acetylcholine receptor subunit alpha-9;CHRNA9;PTN002498441;orthologs
+HUMAN|HGNC=13934|UniProtKB=A0A0B4J1T7	Lymphocyte antigen 6 family member G6E;LY6G6E;PTN002494853;orthologs
+HUMAN|HGNC=9410|UniProtKB=Q04759	Protein kinase C theta type;PRKCQ;PTN002519425;orthologs
+HUMAN|HGNC=9059|UniProtKB=Q15147	1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-4;PLCB4;PTN002470080;orthologs
+HUMAN|HGNC=1959|UniProtKB=P30532	Neuronal acetylcholine receptor subunit alpha-5;CHRNA5;PTN002498475;orthologs
+HUMAN|HGNC=37295|UniProtKB=A4D2H0	cTAGE family member 15;CTAGE15;PTN002508835;orthologs
+HUMAN|HGNC=12643|UniProtKB=P63027	Vesicle-associated membrane protein 2;VAMP2;PTN002501381;orthologs
+HUMAN|HGNC=4407|UniProtKB=P50150	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-4;GNG4;PTN002492813;orthologs
+HUMAN|HGNC=7602|UniProtKB=Q9Y4I1	Unconventional myosin-Va;MYO5A;PTN002490721;orthologs
+HUMAN|HGNC=4586|UniProtKB=Q13224	Glutamate receptor ionotropic, NMDA 2B;GRIN2B;PTN002540152;orthologs
+HUMAN|HGNC=24772|UniProtKB=Q8IX94	cTAGE family member 4;CTAGE4;PTN002508836;orthologs
+HUMAN|HGNC=15906|UniProtKB=A7E2Y1	Myosin-7B;MYH7B;PTN002490832;orthologs
+HUMAN|HGNC=7573|UniProtKB=P11055	Myosin-3;MYH3;PTN002490842;orthologs
+HUMAN|HGNC=7569|UniProtKB=P35749	Myosin-11;MYH11;PTN002490802;orthologs
+HUMAN|HGNC=9406|UniProtKB=Q16513	Serine/threonine-protein kinase N2;PKN2;PTN002519417;orthologs
+HUMAN|HGNC=1962|UniProtKB=P17787	Neuronal acetylcholine receptor subunit beta-2;CHRNB2;PTN002498470;orthologs
+HUMAN|HGNC=19663|UniProtKB=Q9UBI6	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-12;GNG12;PTN002492821;orthologs
+HUMAN|HGNC=6180|UniProtKB=Q14643	Inositol 1,4,5-trisphosphate receptor type 1;ITPR1;PTN002492406;orthologs
+HUMAN|HGNC=6267|UniProtKB=P48051	G protein-activated inward rectifier potassium channel 2;KCNJ6;PTN002482938;orthologs
+HUMAN|HGNC=4384|UniProtKB=P63096	Guanine nucleotide-binding protein G(i) subunit alpha-1;GNAI1;PTN002469272;orthologs
+HUMAN|HGNC=27018|UniProtKB=Q8NI32	Ly6/PLAUR domain-containing protein 6B;LYPD6B;PTN002525428;orthologs
+HUMAN|HGNC=11438|UniProtKB=Q13277	Syntaxin-3;STX3;PTN002500608;orthologs
+HUMAN|HGNC=6728|UniProtKB=O94772	Lymphocyte antigen 6H;LY6H;PTN002529186;orthologs
+HUMAN|HGNC=3403|UniProtKB=P32856	Syntaxin-2;STX2;PTN002500611;orthologs
+HUMAN|HGNC=1399|UniProtKB=P54289	Voltage-dependent calcium channel subunit alpha-2/delta-1;CACNA2D1;PTN002468547;orthologs
+HUMAN|HGNC=144|UniProtKB=P63261	Actin, cytoplasmic 2;ACTG1;PTN002485076;orthologs
+HUMAN|HGNC=9403|UniProtKB=P24723	Protein kinase C eta type;PRKCH;PTN002519418;orthologs
+HUMAN|HGNC=7599|UniProtKB=Q12965	Unconventional myosin-Ie;MYO1E;PTN002490779;orthologs
+HUMAN|HGNC=1950|UniProtKB=P11229	Muscarinic acetylcholine receptor M1;CHRM1;PTN002538174;orthologs
+HUMAN|HGNC=28751|UniProtKB=Q86Y78	Ly6/PLAUR domain-containing protein 6;LYPD6;PTN002525427;orthologs
+HUMAN|HGNC=16768|UniProtKB=O60391	Glutamate receptor ionotropic, NMDA 3B;GRIN3B;PTN002546074;orthologs
+HUMAN|HGNC=1391|UniProtKB=Q01668	Voltage-dependent L-type calcium channel subunit alpha-1D;CACNA1D;PTN002467479;orthologs
+HUMAN|HGNC=9382|UniProtKB=P22612	cAMP-dependent protein kinase catalytic subunit gamma;PRKACG;PTN002519371;orthologs
+HUMAN|HGNC=37275|UniProtKB=A4FU28	cTAGE family member 9;CTAGE9;PTN002508838;orthologs
+HUMAN|HGNC=6266|UniProtKB=P48544	G protein-activated inward rectifier potassium channel 4;KCNJ5;PTN002482939;orthologs
+HUMAN|HGNC=37094|UniProtKB=P0CG39	POTE ankyrin domain family member J;POTEJ;PTN002516351;orthologs
+HUMAN|HGNC=9380|UniProtKB=P17612	cAMP-dependent protein kinase catalytic subunit alpha;PRKACA;PTN002519372;orthologs
+HUMAN|HGNC=7578|UniProtKB=P13535	Myosin-8;MYH8;PTN002490846;orthologs
+HUMAN|HGNC=7574|UniProtKB=Q9Y623	Myosin-4;MYH4;PTN002490844;orthologs
+HUMAN|Ensembl=ENSG00000284912|UniProtKB=A0A2R8YE69	Uncharacterized protein;unassigned;PTN007738758;orthologs
+HUMAN|HGNC=167|UniProtKB=P61163	Alpha-centractin;ACTR1A;PTN002484955;orthologs
+HUMAN|HGNC=25864|UniProtKB=Q53FP2	Novel acetylcholine receptor chaperone;TMEM35A;PTN002491021;orthologs
+HUMAN|HGNC=11132|UniProtKB=P60880	Synaptosomal-associated protein 25;SNAP25;PTN002499664;orthologs
+HUMAN|HGNC=33905|UniProtKB=A5A3E0	POTE ankyrin domain family member F;POTEF;PTN002516352;orthologs
+HUMAN|HGNC=9399|UniProtKB=Q05655	Protein kinase C delta type;PRKCD;PTN002519426;orthologs
+HUMAN|HGNC=12647|UniProtKB=Q9BV40	Vesicle-associated membrane protein 8;VAMP8;PTN002501394;orthologs
+HUMAN|HGNC=25184|UniProtKB=Q96L03	Spermatogenesis-associated protein 17;SPATA17;PTN002503429;orthologs
+HUMAN|HGNC=4382|UniProtKB=O95837	Guanine nucleotide-binding protein subunit alpha-14;GNA14;PTN002469260;orthologs

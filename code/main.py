@@ -1,11 +1,14 @@
+"""
+script for reproducing main results,
+after running `correlate_expression_density.py`
+"""
+
 import numpy as np
 from scipy.stats import zscore, spearmanr
-from statsmodels.stats.multitest import multipletests
 from netneurotools import datasets, stats, utils
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import abagen
 
 def brodmann2dk(M, duplicate, mapping):
     """
@@ -45,7 +48,15 @@ def brodmann2dk(M, duplicate, mapping):
     return convertedM
 
 
-def corr_spin(x, y, spins, nspins):
+def get_perm_p(emp, null, twotailed=True):
+    if twotailed:
+        return (1 + sum(abs(null - np.nanmean(null))
+                        > abs(emp - np.nanmean(null)))) / (len(null) + 1)
+    else:
+        return (1 + sum(null > emp)) / (len(null) + 1)
+
+
+def corr_spin(x, y, spins, nspins, twotailed=True):
 
     # convert x and y to arrays to avoid dataframe index bugs
     x = np.array(x)
@@ -66,10 +77,17 @@ def corr_spin(x, y, spins, nspins):
         df = pd.DataFrame(np.stack((x, tmp)).T, columns=['x', 'y'])
         null[i] = df["x"].corr(df["y"], method='spearman')
 
-    pval = (1 + sum(abs((null - np.mean(null))) >
-                    abs((rho - np.mean(null))))) / (nspins + 1)
-    return rho, pval
+    pval = get_perm_p(rho, null, twotailed)
 
+    return rho, pval, null
+
+
+def get_boot_ci(x, y, nboot=1000):
+    bootstat = np.zeros((nboot, ))
+    for i in range(nboot):
+        bootsamp = np.random.choice(len(x), size=len(x), replace=True)
+        bootstat[i] = spearmanr(x[bootsamp], y[bootsamp])[0]
+    return np.array([np.percentile(bootstat, 2.5), np.percentile(bootstat, 97.5)])
 
 """
 load data
@@ -105,6 +123,16 @@ nspins = 10000
 spins = stats.gen_spinsamples(coords, hemiid=np.ones((len(leftcortex),)),
                               n_rotate=nspins, seed=1234)
 
+# get scale125 spins
+leftcortex125 = info.query('scale == "scale125" \
+                    & structure == "cortex" \
+                    & hemisphere == "L"')['id']
+leftcortex125 = np.array(leftcortex125) - 1  # python indexing
+coords125 = utils.get_centroids(cammoun['scale125'], image_space=True)
+coords125 = coords125[leftcortex125, :]
+spins125 = stats.gen_spinsamples(coords125, hemiid=np.ones((len(leftcortex125),)),
+                                 n_rotate=nspins, seed=1234)
+
 # get gene expression
 rnaseq = False
 if not(rnaseq):
@@ -119,6 +147,14 @@ else:
 # fetch gene expression data:
 # expression = abagen.get_expression_data(cammoun['scale033'], ibf_threshold=0)
 # expression = expression.iloc[leftcortex]
+
+# correlation coefficients
+PETcorrs = pd.read_csv(path+'results/PETcorrs_scale033_microarray.csv')
+AUTcorrs = pd.read_csv(path+'results/AUTcorrs_microarray.csv')
+
+# plotting set up
+plt.rcParams['svg.fonttype'] = 'none'
+plt.rcParams['font.size'] = 8.0
 
 """
 make autoradiography receptor matrix
@@ -169,9 +205,6 @@ PETgenes_recept = ['5HT1a', '5HT1b', '5HT2a', '5HT4', '5HT6', '5HTT',
 
 # cortex
 
-PETcorr = {'rho' : np.zeros((len(PETgenes), )),
-           'pspin' : np.zeros((len(PETgenes), ))}
-
 plt.ion()
 fig, axs = plt.subplots(5, 5, figsize=(15, 12))
 axs = axs.ravel()
@@ -181,17 +214,20 @@ for i in range(len(PETgenes)):
         y = zscore(expression[PETgenes[i]])
     except KeyError:
         continue
-    PETcorr['rho'][i], PETcorr['pspin'][i] = corr_spin(x, y, spins, nspins)
+    row = PETcorrs.query('genes == @PETgenes[@i] & receptors == @PETgenes_recept[@i]')
+    r = np.squeeze(np.array(row['cortex-rho']))
+    p = np.squeeze(np.array(row['cortex-pspin']))
     axs[i].scatter(x, y, s=5)
     axs[i].set_xlabel(PETgenes_recept[i] + ' density')
     axs[i].set_ylabel(PETgenes[i] + ' expression')
-    axs[i].set_title(['r=' + str(PETcorr['rho'][i]) + ', p= ' + str(PETcorr['pspin'][i])])
+    axs[i].set_title(['r=' + str(r)[:5] + ', p= ' + str(p)[:5]])
 plt.tight_layout()
-plt.savefig(path+'figures/scatter_pet.eps')
+plt.savefig(path+'figures/scatter_pet.svg')
 
 """
 Figure 2: autoradiography receptors
 """
+
 AUTgenes = ['GRIA1', 'GRIN1', 'GRIK2', 'GABRA1', 'GABRB2', 'GABRG2',
             'GABRA1', 'GABRG2', 'GABRB2', 'GABBR1', 'GABBR2', 'CHRM1',
             'CHRM2', 'CHRM3', 'CHRNA4', 'CHRNB2', 'ADRA1A', 'ADRA2A',
@@ -201,36 +237,38 @@ AUTgenes_recept = ['AMPA', 'NMDA', 'kainate', 'GABAa', 'GABAa', 'GABAa',
                    'm1', 'm2', 'm3', 'a4b2', 'a4b2', 'a1', 'a2', '5-HT1a',
                    '5-HT2', 'D1']
 
-AUTcorr = {'rho' : np.zeros((len(AUTgenes), )),
-           'pspin' : np.zeros((len(AUTgenes), ))}
-
 plt.ion()
 fig, axs = plt.subplots(5, 5, figsize=(15, 12))
 axs = axs.ravel()
 for i in range(len(AUTgenes)):
+    print(AUTgenes[i])
     x = autorad_data[:, receptor_names_a.index(AUTgenes_recept[i])]
     try:  # necessary if ibf_threshold != 0 in abagen.get_expression_data()
         y = zscore(expression[AUTgenes[i]][:-1])
     except KeyError:
         continue
-    AUTcorr['rho'][i], AUTcorr['pspin'][i] = corr_spin(x, y, spins, nspins)
+    row = AUTcorrs.query('genes == @AUTgenes[@i] & receptors == @AUTgenes_recept[@i]')
+    r = np.squeeze(np.array(row['rho']))
+    p = np.squeeze(np.array(row['pspin']))
     axs[i].scatter(x, y, s=5)
     axs[i].set_xlabel(AUTgenes_recept[i] + ' density')
     axs[i].set_ylabel(AUTgenes[i] + ' expression')
-    axs[i].set_title(['r=' + str(AUTcorr['rho'][i]) + ', p= ' + str(AUTcorr['pspin'][i])])
+    axs[i].set_title(['r=' + str(r)[:5] + ', p= ' + str(p)[:5]])
 plt.tight_layout()
-plt.savefig(path+'figures/scatter_aut.eps')
+plt.savefig(path+'figures/scatter_aut.svg')
 
 """
 Figure 3: differential stability
 """
+
 plt.ion()
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 7))
 # pet
 xarr = []
 yarr = []
-for i in range(len(PETcorr['rho'])):
-    x = PETcorr['rho'][i]
+for i in range(len(PETgenes)):
+    x = np.squeeze(np.array(PETcorrs.query('genes == @PETgenes[@i] \
+                                            & receptors == @PETgenes_recept[@i]')['cortex-rho']))
     y = ds.query('genes == @PETgenes[@i]')['stability']
     ax1.scatter(x, y, c='b')
     ax1.text(x+0.01, y+0.01, PETgenes[i], fontsize=7)
@@ -241,11 +279,14 @@ sns.regplot(x=np.array(xarr), y=np.array(yarr),
 ax1.set_xlabel('gene-receptor correlation')
 ax1.set_ylabel('differential stability')
 ax1.set_aspect(1.0/ax1.get_data_ratio(), adjustable='box')
+r, p = spearmanr(xarr, yarr)
+ax1.set_title(['r=' + str(r)[:5] + ', p=' + str(p)[:6]])
 # autorad
 xarr = []
 yarr = []
-for i in range(len(AUTcorr['rho'])):
-    x = AUTcorr['rho'][i]
+for i in range(len(AUTgenes)):
+    x = np.squeeze(np.array(AUTcorrs.query('genes == @AUTgenes[@i] \
+                                            & receptors == @AUTgenes_recept[@i]')['rho']))
     y = ds.query('genes == @AUTgenes[@i]')['stability']
     ax2.scatter(x, y, c='b')
     ax2.text(x+0.01, y+0.01, AUTgenes[i], fontsize=7)
@@ -256,8 +297,10 @@ sns.regplot(x=np.array(xarr), y=np.array(yarr),
 ax2.set_xlabel('gene-receptor correlation')
 ax2.set_ylabel('differential stability')
 ax2.set_aspect(1.0/ax2.get_data_ratio(), adjustable='box')
+r, p = spearmanr(xarr, yarr)
+ax2.set_title(['r=' + str(r)[:5] + ', p=' + str(p)[:6]])
 plt.tight_layout()
-plt.savefig(path+'figures/scatter_ds.eps')
+plt.savefig(path+'figures/scatter_ds.svg')
 
 """
 Figure 4: functional heirarchy
@@ -272,303 +315,47 @@ for system in range(system_corr.shape[0]):
         y = zscore(expression125[PETgenes[gene]])[mesulam==system+1]
         system_corr[system, gene], _  = spearmanr(x, y)
 
+# get confidence interval for correlations
+boots = np.zeros((len(PETgenes), 2))
+for gene in range(len(PETgenes)):
+    x = PETrecept125[-111:, receptor_names_p.index(PETgenes_recept[gene])]
+    y = zscore(expression125[PETgenes[gene]])
+    boots[gene, :] = get_boot_ci(x, y, nboot=1000)
+
 # plot for each receptor
 plt.ion()
 plt.figure(figsize=(12, 6))
 colour = ['#bfd3e6', '#8c96c6', '#8856a7', '#810f7c']
 for i in range(system_corr.shape[0]):
-    plt.scatter(np.arange(len(PETgenes)), system_corr[i, :], c=colour[i])
+    lw = np.array([boots[j, 0] <= system_corr[i, j] <= boots[j, 1] for j in range(boots.shape[0])])
+    lw = 2*(1 - lw.astype(int))
+    plt.scatter(np.arange(len(PETgenes)), system_corr[i, :], linewidths=lw, color=colour[i])
 plt.xticks(range(len(PETgenes)), PETgenes, rotation=90)
 plt.tight_layout()
 plt.savefig(path+'figures/scatter_hierarchy.eps')
 
-
 """
-Supplementary Figure 1: PET Scale 125
+Figure 5: subcortex
 """
-
-# get spins
-leftcortex = info.query('scale == "scale125" \
-                    & structure == "cortex" \
-                    & hemisphere == "L"')['id']
-leftcortex = np.array(leftcortex) - 1  # python indexing
-coords = utils.get_centroids(cammoun['scale125'], image_space=True)
-coords = coords[leftcortex, :]
-spins = stats.gen_spinsamples(coords, hemiid=np.ones((len(leftcortex),)),
-                              n_rotate=nspins, seed=1234)
-
-PETcorr125 = {'rho' : np.zeros((len(PETgenes), )),
-              'pspin' : np.zeros((len(PETgenes), ))}
-
-plt.ion()
-fig, axs = plt.subplots(5, 5, figsize=(15, 12))
-axs = axs.ravel()
-for i in range(len(PETgenes)):
-    x = PETrecept125[-111:, receptor_names_p.index(PETgenes_recept[i])]
-    y = zscore(expression125[PETgenes[i]])
-    PETcorr125['rho'][i], PETcorr125['pspin'][i] = corr_spin(x, y, spins, nspins)
-    axs[i].scatter(x, y, s=5)
-    axs[i].set_xlabel(PETgenes_recept[i] + ' density')
-    axs[i].set_ylabel(PETgenes[i] + ' expression')
-plt.tight_layout()
-plt.savefig(path+'figures/scatter_pet_scale125.eps')
-
-"""
-Supplementary Figure 2: GABAa subunits
-"""
-
-GABAAgenes = ['GABRR3', 'GABRD', 'GABRR2', 'GABRR1', 'GABRG1', 'GABRA2',
-              'GABRA4', 'GABRB1', 'GABRG3', 'GABRA5', 'GABRB3', 'GABRP',
-              'GABRA6','GABRE','GABRA3','GABRQ']
-
-plt.ion()
-fig, axs = plt.subplots(4, 5, figsize=(15, 10))
-axs = axs.ravel()
-for i in range(len(GABAAgenes)):
-    x = PETrecept[34:, receptor_names_p.index('GABAa')]
-    y = zscore(expression.iloc[leftcortex][GABAAgenes[i]])
-    axs[i].scatter(x, y, s=5)
-    axs[i].set_xlabel('GABAa density')
-    axs[i].set_ylabel(GABAAgenes[i] + ' expression')
-plt.tight_layout()
-plt.savefig(path+'figures/scatter_gabaa.eps')
-
-"""
-Supplementary Figure 3: Subcortex
-"""
-
-PETcorr_subc = {'rho' : np.zeros((len(PETgenes), )),
-                'pspin' : np.zeros((len(PETgenes), ))}
 
 subc_label = info.query('scale=="scale033" & structure=="subcortex"')['label']
 subc_name, subc_label = np.unique(np.array(subc_label), return_inverse=True)
+expression_subc = pd.read_csv(path+'data/expression/scale033_data_subcortex.csv')
 plt.ion()
 fig, axs = plt.subplots(5, 5, figsize=(15, 12))
 axs = axs.ravel()
 for i in range(len(PETgenes)):
     x = PETrecept_subc[:, receptor_names_p.index(PETgenes_recept[i])]
     try:
-        y = zscore(expression.iloc[subcortex][PETgenes[i]])
+        y = zscore(expression_subc[PETgenes[i]])
     except KeyError:
         continue
-    PETcorr_subc['rho'][i], PETcorr_subc['pspin'][i] = spearmanr(x, y)
+    row = PETcorrs.query('genes == @PETgenes[@i] & receptors == @PETgenes_recept[@i]')
+    r = np.squeeze(np.array(row['subcortex-rho']))
+    p = np.squeeze(np.array(row['subcortex-pval']))
     axs[i].scatter(x, y, s=10, c=subc_label)
     axs[i].set_xlabel(PETgenes_recept[i] + ' density')
     axs[i].set_ylabel(PETgenes[i] + ' expression')
+    axs[i].set_title(['r=' + str(r)[:5] + ', p=' + str(p)[:5]])
 plt.tight_layout()
-plt.savefig(path+'figures/scatter_pet_subc.eps')
-
-fig, ax = plt.subplots()
-xarr = []
-yarr = []
-for i in range(len(PETcorr_subc['rho'])):
-    x = PETcorr_subc['rho'][i]
-    y = ds.query('genes == @PETgenes[@i]')['stability']
-    ax.scatter(x, y, c='b')
-    ax.text(x+0.01, y+0.01, PETgenes[i], fontsize=7)
-    xarr.append(x)
-    yarr.append(y)
-sns.regplot(x=np.array(xarr), y=np.array(yarr),
-            scatter=False, ci=False, ax=ax)
-ax.set_xlabel('gene-receptor correlation')
-ax.set_ylabel('differential stability')
-ax.set_aspect(1.0/ax.get_data_ratio(), adjustable='box')
-plt.savefig(path+'figures/scatter_ds_subc.eps')
-
-"""
-Comparing autoradiography to PET
-"""
-
-# overlap: 5-ht1a, 5-ht2, a4b2, D1, GABAa, M1
-pet_idx = [0, 2, 6, 8, 11, 13]
-aut_idx = [12, 13, 9, 14, 3, 6]
-
-fig, axs = plt.subplots(1, len(pet_idx), figsize=(17, 3))
-axs = axs.ravel()
-for i in range(len(pet_idx)):
-    axs[i].scatter(PETrecept[34:-1, pet_idx[i]], autorad_data[:, aut_idx[i]])
-    axs[i].set_xlabel(receptor_names_p[pet_idx[i]] + ' PET density')
-    axs[i].set_ylabel(receptor_names_a[aut_idx[i]] + ' autorad density')
-    r, p = spearmanr(PETrecept[34:-1, pet_idx[i]], autorad_data[:, aut_idx[i]])
-    print(receptor_names_p[pet_idx[i]] + ': r = ' + str(r)[:4] + ', p = ' + str(p)[:5])
-    axs[i].set_title('r = ' + str(r)[:4])
-plt.tight_layout()
-plt.savefig(path+'figures/scatter_petvsaut_density.eps')
-
-
-"""
-Comparing probe selection methods
-"""
-
-# probe_select = ["max_variance", "average", "corr_variance", "corr_intensity"]
-# for probe in range(len(probe_select)):
-#     exp = abagen.get_expression_data(cammoun['scale033'], ibf_threshold=0,
-#                                      probe_selection=probe_select[probe], return_donors=True)
-#     exp, ds = abagen.correct.keep_stable_genes(exp,
-#                                                threshold=0,
-#                                                percentile=True,
-#                                                return_stability=True)
-#     exp = pd.concat(exp).groupby('label').mean()
-#     exp.to_csv(path+'data/expression/scale033_data_' + probe_select[probe] + '.csv')
-#     ds = {'genes': exp.columns, 'stability': ds}
-#     ds = pd.DataFrame(ds)
-#     ds.to_csv(path+'data/expression/scale033_stability_' + probe_select[probe] + '.csv')
-
-plt.ion()
-fig, axs = plt.subplots(2, 4, figsize=(20, 5))
-axs = axs.ravel()
-probe_select = ["average", "max_intensity", "max_variance", "pc_loading",
-                "corr_variance", "corr_intensity", "rnaseq"]
-for probe in range(len(probe_select)):
-    exp = pd.read_csv(path+'data/expression/scale033_data_' + probe_select[probe] + '.csv')
-    ds = pd.read_csv(path+'data/expression/scale033_stability_' + probe_select[probe] + '.csv')
-    exp_den_rho = np.zeros((len(PETgenes)))
-    for rec in range(len(PETgenes)):
-        exp_den_rho[rec] = spearmanr(PETrecept[34:, receptor_names_p.index(PETgenes_recept[rec])],
-                                     zscore(exp.iloc[leftcortex][PETgenes[rec]]))[0]
-    xarr = []
-    yarr = []
-    for i in range(len(exp_den_rho)):
-        x = exp_den_rho[i]
-        y = ds.query('genes == @PETgenes[@i]')['stability']
-        axs[probe].scatter(x, y, c='b')
-        axs[probe].text(x+0.01, y+0.01, PETgenes[i], fontsize=7)
-        xarr.append(x)
-        yarr.append(y)
-    sns.regplot(x=np.array(xarr), y=np.array(yarr),
-                scatter=False, ci=False, ax=axs[probe])
-    r, p = spearmanr(xarr, yarr)
-    print('rho = ' + str(r) + ', p = ' + str(p))
-    axs[probe].set_xlabel('gene-receptor correlation')
-    axs[probe].set_ylabel('differential stability')
-    axs[probe].set_title(probe_select[probe])
-    axs[probe].set_aspect(1.0/axs[probe].get_data_ratio(), adjustable='box')
-plt.tight_layout()
-plt.savefig(path+'figures/scatter_probe_selection.eps')
-
-"""
-Comparing across laminar layers
-"""
-
-layercorrs = dict([])
-layercorrs['rho'] = np.zeros((3, len(AUTgenes)))
-layercorrs['pspin'] = np.zeros((3, len(AUTgenes)))
-layer_data = [receptdata_s, receptdata_g, receptdata_i]
-for layer in range(len(layer_data)):
-    for g in range(len(AUTgenes)):
-        x = layer_data[layer][:, receptor_names_a.index(AUTgenes_recept[g])]
-        try:  # necessary if ibf_threshold != 0 in abagen.get_expression_data()
-            y = zscore(expression[AUTgenes[g]][:-1])
-        except KeyError:
-            continue
-        layercorrs['rho'][layer, g], layercorrs['pspin'][layer, g] = corr_spin(x, y, spins, nspins)
-np.savez(path+'results/layercorrs.npz',
-         rho=layercorrs['rho'],
-         pspin=layercorrs['pspin'])
-
-fig, ax = plt.subplots(figsize=(8, 8))
-ax.plot(layercorrs['rho'])
-# ax.legend(AUTgenes)
-ax.scatter(np.where(layercorrs['pspin'] < 0.05)[0],
-           layercorrs['rho'][layercorrs['pspin'] < 0.05])
-for g in range(len(AUTgenes)):
-    ax.text(-0.4, layercorrs['rho'][0, g], AUTgenes[g])
-ax.set_xticks(range(3))
-ax.set_xticklabels(["supragranular", "granular", "infragranular"])
-ax.set_xlim([-0.5, 2.1])
-plt.tight_layout()
-plt.savefig(path+'figures/plot_laminar_layers.eps')
-
-"""
-Supplemental tables
-"""
-
-# PET
-
-petinfo = {}
-
-petinfo['genes'] = ['HTR1A', 'HTR1B', 'HTR2A', 'HTR4', 'HTR6', 'SLC6A4',  # serotonin
-                    'CHRNA2', 'CHRNA3', 'CHRNA4', 'CHRNA5', 'CHRNA6', 'CHRNA7',
-                    'CHRNA9', 'CHRNA10', 'CHRNB2', 'CHRNB3', 'CHRNB4',  # acetylcholine
-                    'CNR1', 'DRD1', 'DRD2', 'SLC6A3',
-                    'GABRA1', 'GABRB2', 'GABRG2', 'GABRR3', 'GABRD', 'GABRR2',
-                    'GABRR1', 'GABRG1', 'GABRA2', 'GABRA4','GABRB1','GABRG3',
-                    'GABRA5', 'GABRB3', 'GABRP', 'GABRA6','GABRE','GABRA3',
-                    'GABRQ',  # 19 gabaa subunits!!
-                    'HRH3', 'CHRM1', 'GRM5', 'OPRM1', 'SLC6A2', 'SLC18A3']
-
-petinfo['receptors'] = ['5HT1a', '5HT1b', '5HT2a', '5HT4', '5HT6', '5HTT'] \
-                       + ['A4B2' for i in range(11)] \
-                       + ['CB1', 'D1', 'D2', 'DAT'] \
-                       + ['GABAa' for i in range(19)] \
-                       + ['H3', 'M1', 'mGluR5', 'MOR', 'NET', 'VAChT']
-
-petinfo['rho'] = np.zeros((len(petinfo['genes']), ))
-petinfo['pspin'] = np.zeros((len(petinfo['genes']), ))
-
-for i in range(len(petinfo['genes'])):
-    x = PETrecept[34:, receptor_names_p.index(petinfo['receptors'][i])]
-    try:  # necessary if ibf_threshold != 0 in abagen.get_expression_data()
-        y = zscore(expression[petinfo['genes'][i]])
-    except KeyError:
-        continue
-    petinfo['rho'][i], petinfo['pspin'][i] = corr_spin(x, y, spins, nspins)
-
-needs_correct = ['GABAa', 'A4B2']
-for i in range(len(needs_correct)):
-    index = [index for index, value in enumerate(petinfo['receptors']) if value == needs_correct[i]]
-    uncorrected_pval = petinfo['pspin'][index]
-    _, petinfo['pspin'][index], _, _ = multipletests(pvals=uncorrected_pval, method='fdr_bh')
-
-petinfo = pd.DataFrame.from_dict(petinfo)
-petinfo.to_csv(path+'results/Table_S3.csv')
-
-# AUTORADIOGRAPHY
-
-autinfo = {}
-
-autinfo['genes'] = ['GRIA1', 'GRIA2', 'GRIA3', 'GRIA4',  # AMPA
-                    'GRIN1', 'GRIN2A', 'GRIN2B', 'GRIN2C', 'GRIN2D',
-                    'GRIN3A', 'GRIN3B',  # NMDA
-                    'GRIK1', 'GRIK2', 'GRIK3', 'GRIK4', 'GRIK5',  # kainate
-                    'GABRA1', 'GABRB2', 'GABRG2', 'GABRR3', 'GABRD', 'GABRR2',
-                    'GABRR1', 'GABRG1', 'GABRA2', 'GABRA4','GABRB1','GABRG3',
-                    'GABRA5', 'GABRB3', 'GABRP', 'GABRA6','GABRE','GABRA3',
-                    'GABRQ',  # all 19 gabaa subunits
-                    'GABRA1', 'GABRB2', 'GABRG2', 'GABRR3', 'GABRD', 'GABRR2',
-                    'GABRR1', 'GABRG1', 'GABRA2', 'GABRA4','GABRB1','GABRG3',
-                    'GABRA5', 'GABRB3', 'GABRP', 'GABRA6','GABRE','GABRA3',
-                    'GABRQ',  # all 19 gabaa subunits, again
-                    'GABBR1', 'GABBR2', 'CHRM1', 'CHRM2', 'CHRM3',
-                    'CHRNA2', 'CHRNA3', 'CHRNA4', 'CHRNA5', 'CHRNA6', 'CHRNA7',
-                    'CHRNA9', 'CHRNA10', 'CHRNB2', 'CHRNB3', 'CHRNB4',  # acetylcholine
-                    'ADRA1A', 'ADRA2A', 'HTR1A', 'HTR2A', 'DRD1']
-autinfo['receptors'] = ['AMPA' for i in range(4)] \
-                       + ['NMDA' for i in range(7)] \
-                       + ['kainate' for i in range(5)] \
-                       + ['GABAa' for i in range(19)] \
-                       + ['GABAa/BZ' for i in range(19)] \
-                       + ['GABAb' for i in range(2)] \
-                       + ['m1', 'm2', 'm3'] \
-                       + ['a4b2' for i in range(11)] \
-                       + ['a1', 'a2', '5-HT1a', '5-HT2', 'D1']
-
-autinfo['rho'] = np.zeros((len(autinfo['genes']), ))
-autinfo['pspin'] = np.zeros((len(autinfo['genes']), ))
-
-for i in range(len(autinfo['genes'])):
-    x = autorad_data[:, receptor_names_a.index(autinfo['receptors'][i])]
-    try:  # necessary if ibf_threshold != 0 in abagen.get_expression_data()
-        y = zscore(expression[autinfo['genes'][i]][:-1])
-    except KeyError:
-        continue
-    autinfo['rho'][i], autinfo['pspin'][i] = corr_spin(x, y, spins, nspins)
-
-needs_correct = ['AMPA', 'NMDA', 'kainate', 'GABAa', 'GABAa/BZ', 'GABAb', 'a4b2']
-for i in range(len(needs_correct)):
-    index = [index for index, value in enumerate(autinfo['receptors']) if value == needs_correct[i]]
-    uncorrected_pval = autinfo['pspin'][index]
-    _, autinfo['pspin'][index], _, _ = multipletests(pvals=uncorrected_pval, method='fdr_bh')
-
-autinfo = pd.DataFrame.from_dict(autinfo)
-autinfo.to_csv(path+'results/Table_S4.csv')
+plt.savefig(path+'figures/scatter_pet_subc.svg')

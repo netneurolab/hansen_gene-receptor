@@ -1,0 +1,47 @@
+HUMAN|HGNC=233|UniProtKB=Q08462	Adenylate cyclase type 2;ADCY2;PTN002484530;orthologs
+HUMAN|HGNC=12644|UniProtKB=Q15836	Vesicle-associated membrane protein 3;VAMP3;PTN002501372;orthologs
+HUMAN|HGNC=14476|UniProtKB=Q9NX20	39S ribosomal protein L16, mitochondrial;MRPL16;PTN002486810;orthologs
+HUMAN|HGNC=6278|UniProtKB=O14649	Potassium channel subfamily K member 3;KCNK3;PTN002475615;orthologs
+HUMAN|HGNC=4398|UniProtKB=P62879	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-2;GNB2;PTN002500452;orthologs
+HUMAN|HGNC=4408|UniProtKB=P63218	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-5;GNG5;PTN002492807;orthologs
+HUMAN|HGNC=8155|UniProtKB=P41146	Nociceptin receptor;OPRL1;PTN002517290;orthologs
+HUMAN|HGNC=8143|UniProtKB=Q14982	Opioid-binding protein/cell adhesion molecule;OPCML;PTN002533635;orthologs
+HUMAN|HGNC=4404|UniProtKB=P59768	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2;GNG2;PTN002492814;orthologs
+HUMAN|HGNC=4385|UniProtKB=P04899	Guanine nucleotide-binding protein G(i) subunit alpha-2;GNAI2;PTN002469267;orthologs
+HUMAN|HGNC=20731|UniProtKB=Q9HAV0	Guanine nucleotide-binding protein subunit beta-4;GNB4;PTN002500459;orthologs
+HUMAN|HGNC=8157|UniProtKB=Q99720	Sigma non-opioid intracellular receptor 1;SIGMAR1;PTN002474586;orthologs
+HUMAN|HGNC=11131|UniProtKB=O00161	Synaptosomal-associated protein 23;SNAP23;PTN002499658;orthologs
+HUMAN|HGNC=8820|UniProtKB=P01213	Proenkephalin-B;PDYN;PTN002479006;orthologs
+HUMAN|HGNC=11133|UniProtKB=O95721	Synaptosomal-associated protein 29;SNAP29;PTN002499655;orthologs
+HUMAN|HGNC=6283|UniProtKB=Q9NPC2	Potassium channel subfamily K member 9;KCNK9;PTN002475618;orthologs
+HUMAN|HGNC=12642|UniProtKB=P23763	Vesicle-associated membrane protein 1;VAMP1;PTN002501379;orthologs
+HUMAN|HGNC=9201|UniProtKB=P01189	Pro-opiomelanocortin;POMC;PTN002478811;orthologs
+HUMAN|HGNC=15768|UniProtKB=Q9NZT2	Opioid growth factor receptor;OGFR;PTN002493614;orthologs
+HUMAN|HGNC=4401|UniProtKB=O14775	Guanine nucleotide-binding protein subunit beta-5;GNB5;PTN002500449;orthologs
+HUMAN|HGNC=4387|UniProtKB=P08754	Guanine nucleotide-binding protein G(i) subunit alpha-3;GNAI3;PTN002469270;orthologs
+HUMAN|HGNC=4396|UniProtKB=P62873	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1;GNB1;PTN002500457;orthologs
+HUMAN|HGNC=11633|UniProtKB=P15923	Transcription factor E2-alpha;TCF3;PTN002483218;orthologs
+HUMAN|HGNC=21378|UniProtKB=Q5TC84	Opioid growth factor receptor-like protein 1;OGFRL1;PTN002493615;orthologs
+HUMAN|HGNC=4402|UniProtKB=P50151	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-10;GNG10;PTN002492809;orthologs
+HUMAN|HGNC=4400|UniProtKB=P16520	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-3;GNB3;PTN002500451;orthologs
+HUMAN|HGNC=28550|UniProtKB=Q6ZUK4	Transmembrane protein 26;TMEM26;PTN002503004;orthologs
+HUMAN|HGNC=8528|UniProtKB=P01178	Oxytocin-neurophysin 1;OXT;PTN002481768;orthologs
+HUMAN|HGNC=8153|UniProtKB=P41143	Delta-type opioid receptor;OPRD1;PTN002517294;orthologs
+HUMAN|HGNC=8156|UniProtKB=P35372	Mu-type opioid receptor;OPRM1;PTN002517288;orthologs
+HUMAN|HGNC=4410|UniProtKB=O60262	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-7;GNG7;PTN002492820;orthologs
+HUMAN|HGNC=4389|UniProtKB=P09471	Guanine nucleotide-binding protein G(o) subunit alpha;GNAO1;PTN002469289;orthologs
+HUMAN|HGNC=4393|UniProtKB=P11488	Guanine nucleotide-binding protein G(t) subunit alpha-1;GNAT1;PTN002469266;orthologs
+HUMAN|HGNC=4405|UniProtKB=P63215	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-3;GNG3;PTN002492812;orthologs
+HUMAN|HGNC=8831|UniProtKB=P01210	Proenkephalin-A;PENK;PTN002479007;orthologs
+HUMAN|HGNC=894|UniProtKB=P01185	Vasopressin-neurophysin 2-copeptin;AVP;PTN002481770;orthologs
+HUMAN|HGNC=19664|UniProtKB=Q9UK08	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-8;GNG8;PTN002492815;orthologs
+HUMAN|HGNC=4412|UniProtKB=O14610	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-T2;GNGT2;PTN002492817;orthologs
+HUMAN|HGNC=12643|UniProtKB=P63027	Vesicle-associated membrane protein 2;VAMP2;PTN002501381;orthologs
+HUMAN|HGNC=4407|UniProtKB=P50150	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-4;GNG4;PTN002492813;orthologs
+HUMAN|HGNC=19663|UniProtKB=Q9UBI6	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-12;GNG12;PTN002492821;orthologs
+HUMAN|HGNC=8154|UniProtKB=P41145	Kappa-type opioid receptor;OPRK1;PTN002517289;orthologs
+HUMAN|HGNC=4384|UniProtKB=P63096	Guanine nucleotide-binding protein G(i) subunit alpha-1;GNAI1;PTN002469272;orthologs
+HUMAN|HGNC=11438|UniProtKB=Q13277	Syntaxin-3;STX3;PTN002500608;orthologs
+HUMAN|HGNC=238|UniProtKB=P51828	Adenylate cyclase type 7;ADCY7;PTN002484526;orthologs
+HUMAN|HGNC=11132|UniProtKB=P60880	Synaptosomal-associated protein 25;SNAP25;PTN002499664;orthologs
+HUMAN|HGNC=12647|UniProtKB=Q9BV40	Vesicle-associated membrane protein 8;VAMP8;PTN002501394;orthologs

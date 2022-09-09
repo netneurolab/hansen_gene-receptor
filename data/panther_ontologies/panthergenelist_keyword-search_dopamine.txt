@@ -1,0 +1,72 @@
+HUMAN|HGNC=233|UniProtKB=Q08462	Adenylate cyclase type 2;ADCY2;PTN002484530;orthologs
+HUMAN|HGNC=2065|UniProtKB=Q96NY7	Chloride intracellular channel protein 6;CLIC6;PTN002557087;orthologs
+HUMAN|HGNC=12644|UniProtKB=Q15836	Vesicle-associated membrane protein 3;VAMP3;PTN002501372;orthologs
+HUMAN|HGNC=4390|UniProtKB=P50148	Guanine nucleotide-binding protein G(q) subunit alpha;GNAQ;PTN002469262;orthologs
+HUMAN|HGNC=14476|UniProtKB=Q9NX20	39S ribosomal protein L16, mitochondrial;MRPL16;PTN002486810;orthologs
+HUMAN|HGNC=6278|UniProtKB=O14649	Potassium channel subfamily K member 3;KCNK3;PTN002475615;orthologs
+HUMAN|HGNC=9283|UniProtKB=P36873	Serine/threonine-protein phosphatase PP1-gamma catalytic subunit;PPP1CC;PTN002481514;orthologs
+HUMAN|HGNC=3379|UniProtKB=O43491	Band 4.1-like protein 2;EPB41L2;PTN002510838;orthologs
+HUMAN|HGNC=3026|UniProtKB=P21918	D(1B) dopamine receptor;DRD5;PTN002537114;orthologs
+HUMAN|HGNC=9391|UniProtKB=P13861	cAMP-dependent protein kinase type II-alpha regulatory subunit;PRKAR2A;PTN002541696;orthologs
+HUMAN|HGNC=4398|UniProtKB=P62879	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-2;GNB2;PTN002500452;orthologs
+HUMAN|HGNC=4379|UniProtKB=P29992	Guanine nucleotide-binding protein subunit alpha-11;GNA11;PTN002469255;orthologs
+HUMAN|HGNC=4383|UniProtKB=P30679	Guanine nucleotide-binding protein subunit alpha-15;GNA15;PTN002469254;orthologs
+HUMAN|HGNC=9381|UniProtKB=P22694	cAMP-dependent protein kinase catalytic subunit beta;PRKACB;PTN002519370;orthologs
+HUMAN|HGNC=4385|UniProtKB=P04899	Guanine nucleotide-binding protein G(i) subunit alpha-2;GNAI2;PTN002469267;orthologs
+HUMAN|HGNC=20731|UniProtKB=Q9HAV0	Guanine nucleotide-binding protein subunit beta-4;GNB4;PTN002500459;orthologs
+HUMAN|HGNC=9392|UniProtKB=P31323	cAMP-dependent protein kinase type II-beta regulatory subunit;PRKAR2B;PTN002541694;orthologs
+HUMAN|HGNC=9281|UniProtKB=P62136	Serine/threonine-protein phosphatase PP1-alpha catalytic subunit;PPP1CA;PTN002481511;orthologs
+HUMAN|HGNC=11131|UniProtKB=O00161	Synaptosomal-associated protein 23;SNAP23;PTN002499658;orthologs
+HUMAN|HGNC=11133|UniProtKB=O95721	Synaptosomal-associated protein 29;SNAP29;PTN002499655;orthologs
+HUMAN|HGNC=6283|UniProtKB=Q9NPC2	Potassium channel subfamily K member 9;KCNK9;PTN002475618;orthologs
+HUMAN|HGNC=3020|UniProtKB=P21728	D(1A) dopamine receptor;DRD1;PTN002537112;orthologs
+HUMAN|HGNC=12642|UniProtKB=P23763	Vesicle-associated membrane protein 1;VAMP1;PTN002501379;orthologs
+HUMAN|HGNC=24913|UniProtKB=Q49AH0	Cerebral dopamine neurotrophic factor;CDNF;PTN002490309;orthologs
+HUMAN|HGNC=4566|UniProtKB=P62993	Growth factor receptor-bound protein 2;GRB2;PTN002521467;orthologs
+HUMAN|HGNC=11049|UniProtKB=Q01959	Sodium-dependent dopamine transporter;SLC6A3;PTN002481016;orthologs
+HUMAN|HGNC=4401|UniProtKB=O14775	Guanine nucleotide-binding protein subunit beta-5;GNB5;PTN002500449;orthologs
+HUMAN|HGNC=3380|UniProtKB=Q9Y2J2	Band 4.1-like protein 3;EPB41L3;PTN002510835;orthologs
+HUMAN|HGNC=4392|UniProtKB=Q5JWF2	Guanine nucleotide-binding protein G(s) subunit alpha isoforms XLas;GNAS;PTN002469287;orthologs
+HUMAN|HGNC=28905|UniProtKB=Q86U90	YrdC domain-containing protein, mitochondrial;YRDC;PTN002497788;orthologs
+HUMAN|HGNC=4387|UniProtKB=P08754	Guanine nucleotide-binding protein G(i) subunit alpha-3;GNAI3;PTN002469270;orthologs
+HUMAN|HGNC=4395|UniProtKB=P19086	Guanine nucleotide-binding protein G(z) subunit alpha;GNAZ;PTN002469285;orthologs
+HUMAN|HGNC=2228|UniProtKB=P21964	Catechol O-methyltransferase;COMT;PTN002536616;orthologs
+HUMAN|HGNC=10935|UniProtKB=Q05940	Synaptic vesicular amine transporter;SLC18A2;PTN002512359;orthologs
+HUMAN|HGNC=3378|UniProtKB=Q9H4G0	Band 4.1-like protein 1;EPB41L1;PTN002510837;orthologs
+HUMAN|HGNC=4396|UniProtKB=P62873	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1;GNB1;PTN002500457;orthologs
+HUMAN|HGNC=6834|UniProtKB=P27338	Amine oxidase [flavin-containing] B;MAOB;PTN002535746;orthologs
+HUMAN|HGNC=9441|UniProtKB=P51817	cAMP-dependent protein kinase catalytic subunit PRKX;PRKX;PTN002519385;orthologs
+HUMAN|HGNC=19834|UniProtKB=Q4W4Y0	Uncharacterized protein C14orf28;C14orf28;PTN002532252;orthologs
+HUMAN|HGNC=9287|UniProtKB=Q9UD71	Protein phosphatase 1 regulatory subunit 1B;PPP1R1B;PTN002495957;orthologs
+HUMAN|HGNC=3023|UniProtKB=P14416	D(2) dopamine receptor;DRD2;PTN002517616;orthologs
+HUMAN|HGNC=4400|UniProtKB=P16520	Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-3;GNB3;PTN002500451;orthologs
+HUMAN|HGNC=20954|UniProtKB=Q9NP79	Vacuolar protein sorting-associated protein VTA1 homolog;VTA1;PTN000297068;orthologs
+HUMAN|HGNC=3754|UniProtKB=P21333	Filamin-A;FLNA;PTN002541122;orthologs
+HUMAN|HGNC=4393|UniProtKB=P11488	Guanine nucleotide-binding protein G(t) subunit alpha-1;GNAT1;PTN002469266;orthologs
+HUMAN|HGNC=4405|UniProtKB=P63215	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-3;GNG3;PTN002492812;orthologs
+HUMAN|HGNC=4403|UniProtKB=P61952	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-11;GNG11;PTN002492818;orthologs
+HUMAN|HGNC=19246|UniProtKB=Q9NYB0	Telomeric repeat-binding factor 2-interacting protein 1;TERF2IP;PTN002497430;orthologs
+HUMAN|HGNC=9444|UniProtKB=O43930	Putative serine/threonine-protein kinase PRKY;PRKY;PTN002519384;orthologs
+HUMAN|HGNC=1774|UniProtKB=Q00535	Cyclin-dependent-like kinase 5;CDK5;PTN002514178;orthologs
+HUMAN|HGNC=19664|UniProtKB=Q9UK08	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-8;GNG8;PTN002492815;orthologs
+HUMAN|HGNC=2719|UniProtKB=P20711	Aromatic-L-amino-acid decarboxylase;DDC;PTN002485636;orthologs
+HUMAN|HGNC=6833|UniProtKB=P21397	Amine oxidase [flavin-containing] A;MAOA;PTN002535747;orthologs
+HUMAN|HGNC=12643|UniProtKB=P63027	Vesicle-associated membrane protein 2;VAMP2;PTN002501381;orthologs
+HUMAN|HGNC=24581|UniProtKB=Q6Y2X3	DnaJ homolog subfamily C member 14;DNAJC14;PTN002550939;orthologs
+HUMAN|HGNC=4407|UniProtKB=P50150	Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-4;GNG4;PTN002492813;orthologs
+HUMAN|HGNC=4380|UniProtKB=Q03113	Guanine nucleotide-binding protein subunit alpha-12;GNA12;PTN002469249;orthologs
+HUMAN|HGNC=4381|UniProtKB=Q14344	Guanine nucleotide-binding protein subunit alpha-13;GNA13;PTN002469248;orthologs
+HUMAN|HGNC=3025|UniProtKB=P21917	D(4) dopamine receptor;DRD4;PTN002545631;orthologs
+HUMAN|HGNC=3024|UniProtKB=P35462	D(3) dopamine receptor;DRD3;PTN002545632;orthologs
+HUMAN|HGNC=3377|UniProtKB=P11171	Protein 4.1;EPB41;PTN002510833;orthologs
+HUMAN|HGNC=4384|UniProtKB=P63096	Guanine nucleotide-binding protein G(i) subunit alpha-1;GNAI1;PTN002469272;orthologs
+HUMAN|HGNC=9282|UniProtKB=P62140	Serine/threonine-protein phosphatase PP1-beta catalytic subunit;PPP1CB;PTN002481620;orthologs
+HUMAN|HGNC=11438|UniProtKB=Q13277	Syntaxin-3;STX3;PTN002500608;orthologs
+HUMAN|HGNC=238|UniProtKB=P51828	Adenylate cyclase type 7;ADCY7;PTN002484526;orthologs
+HUMAN|HGNC=11782|UniProtKB=P07101	Tyrosine 3-monooxygenase;TH;PTN002479349;orthologs
+HUMAN|HGNC=9382|UniProtKB=P22612	cAMP-dependent protein kinase catalytic subunit gamma;PRKACG;PTN002519371;orthologs
+HUMAN|HGNC=9380|UniProtKB=P17612	cAMP-dependent protein kinase catalytic subunit alpha;PRKACA;PTN002519372;orthologs
+HUMAN|HGNC=2689|UniProtKB=P09172	Dopamine beta-hydroxylase;DBH;PTN002468400;orthologs
+HUMAN|HGNC=11132|UniProtKB=P60880	Synaptosomal-associated protein 25;SNAP25;PTN002499664;orthologs
+HUMAN|HGNC=12647|UniProtKB=Q9BV40	Vesicle-associated membrane protein 8;VAMP8;PTN002501394;orthologs
+HUMAN|HGNC=4382|UniProtKB=O95837	Guanine nucleotide-binding protein subunit alpha-14;GNA14;PTN002469260;orthologs
