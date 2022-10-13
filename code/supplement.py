@@ -493,50 +493,6 @@ plt.tight_layout()
 plt.savefig(path+'figures/scatter_nncorr_aut.eps')
 
 """
-Supplementary Figure : RSN & VE network classification
-"""
-
-rsn_mapping = info.query('scale == "scale125" \
-                         & structure == "cortex" \
-                         & hemisphere == "L"')['yeo_7']
-rsn_labels, rsn_mapping = np.unique(rsn_mapping, return_inverse=True)
-rsn_idx = np.array([0, 2, 3, 5, 1, 4, 6])  # from dmn --> vis
-
-ve_mapping = np.genfromtxt('/home/jhansen/data/ve_mapping_scale125.csv',
-                           delimiter=',', dtype=int)[-111:] - 1
-ve_labels = np.array(pd.read_csv('/home/jhansen/data/ve_mapping_names.csv')['labels'])
-ve_idx = np.array([6, 5, 2, 1, 3, 4, 0])  # from insular --> motor
-
-# get expression-density correlation within system
-system, system_idx = ve_mapping, ve_idx  # or ve_mapping, ve_idx
-system_corr = np.zeros((np.max(system)+1, len(PETgenes)))
-for sys in range(system_corr.shape[0]):
-    for gene in range(len(PETgenes)):
-        x = PETrecept125[-111:, receptor_names_p.index(PETgenes_recept[gene])][system==sys]
-        y = zscore(expression125[PETgenes[gene]])[system==sys]
-        system_corr[sys, gene], _  = spearmanr(x, y)
-
-# get confidence interval for correlations
-boots = np.zeros((len(PETgenes), 2))
-for gene in range(len(PETgenes)):
-    x = PETrecept125[-111:, receptor_names_p.index(PETgenes_recept[gene])]
-    y = zscore(expression125[PETgenes[gene]])
-    boots[gene, :] = get_boot_ci(x, y, nboot=1000)
-
-# plot for each receptor
-plt.ion()
-plt.figure(figsize=(12, 6))
-cmap = plt.get_cmap('BuPu', np.max(system)+3)
-for i in range(system_corr.shape[0]):
-    lw = np.array([boots[j, 0] <= system_corr[i, j] <= boots[j, 1] for j in range(boots.shape[0])])
-    lw = 2*(1 - lw.astype(int))
-    plt.scatter(np.arange(len(PETgenes)), system_corr[i, :], linewidths=lw, color=cmap(system_idx[i]+2))
-plt.xticks(range(len(PETgenes)), PETgenes, rotation=90)
-plt.tight_layout()
-plt.savefig(path+'figures/scatter_hierarchy_ve.eps')  # or _ve
-
-
-"""
 Supplementary Figure: whole-brain
 """
 

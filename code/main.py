@@ -82,12 +82,14 @@ def corr_spin(x, y, spins, nspins, twotailed=True):
     return rho, pval, null
 
 
-def get_boot_ci(x, y, nboot=1000):
+def get_boot_ci(x, y, nobvs=None, nboot=1000):
+    if nobvs == None:
+        nobvs = len(x)
     bootstat = np.zeros((nboot, ))
     for i in range(nboot):
-        bootsamp = np.random.choice(len(x), size=len(x), replace=True)
+        bootsamp = np.random.choice(len(x), size=nobvs, replace=True)
         bootstat[i] = spearmanr(x[bootsamp], y[bootsamp])[0]
-    return np.array([np.percentile(bootstat, 2.5), np.percentile(bootstat, 97.5)])
+    return np.percentile(bootstat, 2.5), np.percentile(bootstat, 97.5)
 
 """
 load data
@@ -258,7 +260,33 @@ plt.tight_layout()
 plt.savefig(path+'figures/scatter_aut.svg')
 
 """
-Figure 3: differential stability
+Figure 3: subcortex
+"""
+
+subc_label = info.query('scale=="scale033" & structure=="subcortex"')['label']
+subc_name, subc_label = np.unique(np.array(subc_label), return_inverse=True)
+expression_subc = pd.read_csv(path+'data/expression/scale033_data_subcortex.csv')
+plt.ion()
+fig, axs = plt.subplots(5, 5, figsize=(15, 12))
+axs = axs.ravel()
+for i in range(len(PETgenes)):
+    x = PETrecept_subc[:, receptor_names_p.index(PETgenes_recept[i])]
+    try:
+        y = zscore(expression_subc[PETgenes[i]])
+    except KeyError:
+        continue
+    row = PETcorrs.query('genes == @PETgenes[@i] & receptors == @PETgenes_recept[@i]')
+    r = np.squeeze(np.array(row['subcortex-rho']))
+    p = np.squeeze(np.array(row['subcortex-pval']))
+    axs[i].scatter(x, y, s=10, c=subc_label)
+    axs[i].set_xlabel(PETgenes_recept[i] + ' density')
+    axs[i].set_ylabel(PETgenes[i] + ' expression')
+    axs[i].set_title(['r=' + str(r)[:5] + ', p=' + str(p)[:5]])
+plt.tight_layout()
+plt.savefig(path+'figures/scatter_pet_subc.svg')
+
+"""
+Figure 4: differential stability
 """
 
 plt.ion()
@@ -301,61 +329,3 @@ r, p = spearmanr(xarr, yarr)
 ax2.set_title(['r=' + str(r)[:5] + ', p=' + str(p)[:6]])
 plt.tight_layout()
 plt.savefig(path+'figures/scatter_ds.svg')
-
-"""
-Figure 4: functional heirarchy
-"""
-
-mesulam = np.genfromtxt(path+'data/mesulam_mapping.csv', delimiter=',')
-mesulam = mesulam[-111:].astype(int)
-system_corr = np.zeros((4, len(PETgenes)))
-for system in range(system_corr.shape[0]):
-    for gene in range(len(PETgenes)):
-        x = PETrecept125[-111:, receptor_names_p.index(PETgenes_recept[gene])][mesulam==system+1]
-        y = zscore(expression125[PETgenes[gene]])[mesulam==system+1]
-        system_corr[system, gene], _  = spearmanr(x, y)
-
-# get confidence interval for correlations
-boots = np.zeros((len(PETgenes), 2))
-for gene in range(len(PETgenes)):
-    x = PETrecept125[-111:, receptor_names_p.index(PETgenes_recept[gene])]
-    y = zscore(expression125[PETgenes[gene]])
-    boots[gene, :] = get_boot_ci(x, y, nboot=1000)
-
-# plot for each receptor
-plt.ion()
-plt.figure(figsize=(12, 6))
-colour = ['#bfd3e6', '#8c96c6', '#8856a7', '#810f7c']
-for i in range(system_corr.shape[0]):
-    lw = np.array([boots[j, 0] <= system_corr[i, j] <= boots[j, 1] for j in range(boots.shape[0])])
-    lw = 2*(1 - lw.astype(int))
-    plt.scatter(np.arange(len(PETgenes)), system_corr[i, :], linewidths=lw, color=colour[i])
-plt.xticks(range(len(PETgenes)), PETgenes, rotation=90)
-plt.tight_layout()
-plt.savefig(path+'figures/scatter_hierarchy.eps')
-
-"""
-Figure 5: subcortex
-"""
-
-subc_label = info.query('scale=="scale033" & structure=="subcortex"')['label']
-subc_name, subc_label = np.unique(np.array(subc_label), return_inverse=True)
-expression_subc = pd.read_csv(path+'data/expression/scale033_data_subcortex.csv')
-plt.ion()
-fig, axs = plt.subplots(5, 5, figsize=(15, 12))
-axs = axs.ravel()
-for i in range(len(PETgenes)):
-    x = PETrecept_subc[:, receptor_names_p.index(PETgenes_recept[i])]
-    try:
-        y = zscore(expression_subc[PETgenes[i]])
-    except KeyError:
-        continue
-    row = PETcorrs.query('genes == @PETgenes[@i] & receptors == @PETgenes_recept[@i]')
-    r = np.squeeze(np.array(row['subcortex-rho']))
-    p = np.squeeze(np.array(row['subcortex-pval']))
-    axs[i].scatter(x, y, s=10, c=subc_label)
-    axs[i].set_xlabel(PETgenes_recept[i] + ' density')
-    axs[i].set_ylabel(PETgenes[i] + ' expression')
-    axs[i].set_title(['r=' + str(r)[:5] + ', p=' + str(p)[:5]])
-plt.tight_layout()
-plt.savefig(path+'figures/scatter_pet_subc.svg')
